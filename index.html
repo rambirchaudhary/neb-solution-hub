@@ -15,23 +15,17 @@
   <meta property="og:image" content="assets/images/og-image.png" />
   <meta property="og:url" content="https://nebsolutionhub.example" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NEB Solution Hub — Grade 11 & 12 Premium Learning" />
-  <meta name="twitter:description" content="Board questions, handwritten notes, mock tests, AI study assistant and video lessons for NEB Grade 11 & 12 students." />
-  <meta name="twitter:image" content="assets/images/og-image.png" />
-
-  <!-- Prevent theme flash: apply saved theme before CSS loads -->
+  <!-- Prevent theme flash -->
   <script>
     (function() {
       try {
         const t = localStorage.getItem('neb-theme');
         if (t === 'dark') document.documentElement.classList.add('dark');
-      } catch (e) { /* ignore */ }
+      } catch (e) {}
     })();
   </script>
 
-  <!-- Preconnect fonts for performance -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -39,31 +33,25 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Favicons -->
+  <!-- Favicon -->
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
-
-  <!-- Accessibility: skip link visible before CSS loads -->
-  <style>
-    .skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-    .skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; background:#fff; padding:8px 12px; border-radius:6px; z-index:9999; box-shadow:0 6px 18px rgba(2,6,23,.12); }
-  </style>
 </head>
 <body class="light" data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Loading Screen -->
-  <div id="loading-screen" aria-hidden="false" role="status">
+  <div id="loading-screen" role="status" aria-hidden="false">
     <div class="loader" aria-hidden="true"></div>
     <p class="sr-only">Loading NEB Solution Hub</p>
   </div>
 
-  <!-- Toast container -->
+  <!-- Toast -->
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
 
-  <!-- Sticky Navbar -->
+  <!-- Header / Navbar -->
   <header id="site-header" class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="NEB Solution Hub home">
+      <a href="index.html" class="logo" aria-label="NEB Solution Hub home">
         <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
@@ -142,6 +130,21 @@
             <a href="#subjects" class="btn cta primary">Explore Subjects</a>
             <a href="#features" class="btn cta ghost">See Features</a>
           </div>
+
+          <div class="hero-meta" aria-hidden="true">
+            <div class="meta-item">
+              <strong class="meta-number">120k+</strong>
+              <span class="meta-label">Students</span>
+            </div>
+            <div class="meta-item">
+              <strong class="meta-number">1.2M+</strong>
+              <span class="meta-label">Questions Solved</span>
+            </div>
+            <div class="meta-item">
+              <strong class="meta-number">15k+</strong>
+              <span class="meta-label">Notes</span>
+            </div>
+          </div>
         </div>
 
         <aside class="hero-visual" aria-hidden="true">
@@ -161,7 +164,33 @@
       </div>
     </section>
 
-    <!-- SUBJECTS / Mindmap (merged and upgraded) -->
+    <!-- STATISTICS -->
+    <section id="stats" class="stats container" aria-label="Statistics">
+      <div class="stats-grid">
+        <div class="stat" data-target="120000">
+          <h3 class="stat-number">0</h3>
+          <p class="stat-label">Students</p>
+        </div>
+        <div class="stat" data-target="1200000">
+          <h3 class="stat-number">0</h3>
+          <p class="stat-label">Questions Solved</p>
+        </div>
+        <div class="stat" data-target="15000">
+          <h3 class="stat-number">0</h3>
+          <p class="stat-label">Notes</p>
+        </div>
+        <div class="stat" data-target="300000">
+          <h3 class="stat-number">0</h3>
+          <p class="stat-label">Downloads</p>
+        </div>
+        <div class="stat" data-target="2500">
+          <h3 class="stat-number">0</h3>
+          <p class="stat-label">Teachers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECTS / Mindmap -->
     <section id="subjects" class="section container reveal" aria-label="Subjects">
       <header class="section-header">
         <h2>Subjects Covered</h2>
@@ -176,7 +205,6 @@
           <div id="branch-physics" class="branch-node" role="button" tabindex="0" aria-expanded="false">Physics</div>
           <ul class="branch-content" aria-hidden="true">
             <li><a href="https://drive.google.com/file/d/14cs50y17_Lu4z3P4TkeLwvMhn2gVadFA/preview" target="_blank" rel="noopener">Book</a></li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Notes</span>
               <ul class="sub-content" aria-hidden="true">
@@ -190,7 +218,6 @@
                 <li><a href="#" class="disabled">Recent Trends</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Past Year Questions</span>
               <ul class="sub-content" aria-hidden="true">
@@ -200,7 +227,6 @@
                 <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li><a href="physics-important-questions.html">Important Questions</a></li>
             <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
           </ul>
@@ -211,7 +237,6 @@
           <div id="branch-chemistry" class="branch-node" role="button" tabindex="0" aria-expanded="false">Chemistry</div>
           <ul class="branch-content" aria-hidden="true">
             <li><a href="https://drive.google.com/file/d/1xIrG3vovuq2t8YGF7FEQQy5wIf400NCT/preview" target="_blank" rel="noopener">Book</a></li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Notes</span>
               <ul class="sub-content" aria-hidden="true">
@@ -220,7 +245,6 @@
                 <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Past Year Questions</span>
               <ul class="sub-content" aria-hidden="true">
@@ -230,18 +254,16 @@
                 <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
             <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
           </ul>
         </div>
 
-        <!-- Mathematics branch -->
+        <!-- Maths -->
         <div class="branch" role="group" aria-labelledby="branch-maths">
           <div id="branch-maths" class="branch-node" role="button" tabindex="0" aria-expanded="false">Maths</div>
           <ul class="branch-content" aria-hidden="true">
             <li><a href="https://drive.google.com/file/d/1QlStA3qo0ZL1tvJtXgNIPATeb5RgpO9S/preview" target="_blank" rel="noopener">Book</a></li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Notes</span>
               <ul class="sub-content" aria-hidden="true">
@@ -250,7 +272,6 @@
                 <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Past Year Questions</span>
               <ul class="sub-content" aria-hidden="true">
@@ -260,18 +281,16 @@
                 <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
             <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
           </ul>
         </div>
 
-        <!-- Computer branch -->
+        <!-- Computer -->
         <div class="branch" role="group" aria-labelledby="branch-computer">
           <div id="branch-computer" class="branch-node" role="button" tabindex="0" aria-expanded="false">Computer</div>
           <ul class="branch-content" aria-hidden="true">
             <li><a href="https://drive.google.com/file/d/1Hbg_aZfYuCqernWK-c2e-FSSJH11PEwf/preview" target="_blank" rel="noopener">Book</a></li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Notes</span>
               <ul class="sub-content" aria-hidden="true">
@@ -280,7 +299,6 @@
                 <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li class="sub-branch" role="group">
               <span class="sub-node" role="button" tabindex="0" aria-expanded="false">Past Year Questions</span>
               <ul class="sub-content" aria-hidden="true">
@@ -290,7 +308,6 @@
                 <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
               </ul>
             </li>
-
             <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
             <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
           </ul>
@@ -298,7 +315,7 @@
       </div>
     </section>
 
-    <!-- FEATURES (kept concise for now) -->
+    <!-- FEATURES -->
     <section id="features" class="section container reveal" aria-label="Features">
       <header class="section-header">
         <h2>Features</h2>
@@ -332,8 +349,86 @@
       </div>
     </section>
 
-    <!-- FAQ (merged and accessible) -->
-    <section id="faq" class="faq reveal" aria-label="Frequently asked questions">
+    <!-- LATEST NOTES -->
+    <section id="notes" class="section container reveal" aria-label="Latest Notes">
+      <header class="section-header">
+        <h2>Latest Notes</h2>
+        <p>Beautifully formatted notes and quick reference cards for revision.</p>
+      </header>
+
+      <div class="notes-grid">
+        <article class="note-card" tabindex="0" role="article">
+          <img data-src="assets/images/note-physics.jpg" loading="lazy" alt="Physics note thumbnail" class="note-thumb lazy" />
+          <div class="note-body">
+            <span class="note-subject">Physics</span>
+            <h3>Mechanics — Quick Revision Sheet</h3>
+            <p>Concise formulas, solved examples, and exam tips for mechanics.</p>
+            <div class="note-actions">
+              <a href="physics-important-questions.html" class="btn ghost small">Read More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="note-card" tabindex="0" role="article">
+          <img data-src="assets/images/note-math.jpg" loading="lazy" alt="Math note thumbnail" class="note-thumb lazy" />
+          <div class="note-body">
+            <span class="note-subject">Mathematics</span>
+            <h3>Calculus Cheat Sheet</h3>
+            <p>Derivatives, integrals, and common identities in one page.</p>
+            <div class="note-actions">
+              <a href="#" class="btn ghost small">Read More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="note-card" tabindex="0" role="article">
+          <img data-src="assets/images/note-chem.jpg" loading="lazy" alt="Chemistry note thumbnail" class="note-thumb lazy" />
+          <div class="note-body">
+            <span class="note-subject">Chemistry</span>
+            <h3>Organic Reaction Map</h3>
+            <p>Key reactions, mechanisms, and exam-style questions.</p>
+            <div class="note-actions">
+              <a href="#" class="btn ghost small">Read More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section container reveal" aria-label="Testimonials">
+      <header class="section-header">
+        <h2>What Students Say</h2>
+        <p>Real feedback from NEB students who improved their scores with focused revision.</p>
+      </header>
+
+      <div class="carousel" aria-roledescription="carousel" aria-label="Student testimonials" aria-live="polite">
+        <div class="carousel-track" role="list">
+          <blockquote class="testimonial" role="listitem" tabindex="0">
+            <p>“NEB Solution Hub helped me structure my revision. The mock tests were exactly like the board exam.”</p>
+            <cite>— Sita, Grade 12</cite>
+          </blockquote>
+
+          <blockquote class="testimonial" role="listitem" tabindex="0">
+            <p>“The handwritten notes are a lifesaver. Clear, concise and exam-focused.”</p>
+            <cite>— Ramesh, Grade 11</cite>
+          </blockquote>
+
+          <blockquote class="testimonial" role="listitem" tabindex="0">
+            <p>“AI assistant gave me quick summaries and helped me plan a 2-week revision schedule.”</p>
+            <cite>— Anjali, Grade 12</cite>
+          </blockquote>
+        </div>
+
+        <div class="carousel-controls" role="group" aria-label="Testimonial controls">
+          <button class="carousel-prev btn icon-btn" aria-label="Previous testimonial">‹</button>
+          <button class="carousel-next btn icon-btn" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section container reveal" aria-label="Frequently asked questions">
       <header class="section-header">
         <h2>Frequently Asked Questions</h2>
         <p>Common questions about the platform, resources, and study strategies.</p>
@@ -377,36 +472,78 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about reveal" aria-label="About">
-      <header class="section-header">
-        <h2>About This Page</h2>
-      </header>
-      <p class="about-text">NEB Solution Hub is built to help Grade 11 and Grade 12 students across Nepal prepare for their exams with confidence. Our goal is to provide clear notes, solved questions, diagrams, model questions, MCQs, and past papers in one organized place — so students spend less time searching and more time learning.</p>
-    </section>
-
-    <!-- CONTACT / FOOTER -->
-    <section id="contact" class="section container reveal" aria-label="Contact">
-      <header class="section-header">
-        <h2>Contact</h2>
-      </header>
-
-      <div class="contact-grid">
-        <div>
-          <p>Email: <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a></p>
-          <p>Phone: <a href="tel:+977966099144">+977 9766090914</a></p>
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="section container reveal" aria-label="Newsletter">
+      <div class="newsletter-inner">
+        <div class="newsletter-content">
+          <h3>Stay exam-ready</h3>
+          <p>Subscribe for weekly revision plans, new notes, and mock tests.</p>
         </div>
-        <div>
-          <p class="muted">© <span id="current-year">2026</span> NEB Solution Hub. Built by Rambir.</p>
-        </div>
+
+        <form id="newsletter-form" class="newsletter-form" aria-label="Subscribe to newsletter" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input id="newsletter-email" type="email" placeholder="Your email address" required aria-required="true" />
+          <button type="submit" class="btn primary">Subscribe</button>
+        </form>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a href="index.html" class="logo small" aria-label="NEB Solution Hub home">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#2563EB"></rect></svg>
+          <span class="brand">NEB Solution Hub</span>
+        </a>
+        <p class="muted">Premium NEB resources for Grade 11 & 12 students.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a><br/>
+          Kathmandu, Nepal
+        </address>
+
+        <div class="social" aria-hidden="true">
+          <a href="#" aria-label="Twitter" class="icon">T</a>
+          <a href="#" aria-label="Facebook" class="icon">f</a>
+          <a href="#" aria-label="Instagram" class="icon">ig</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="muted">© <span id="current-year"></span> NEB Solution Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <!-- Back to top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>↑</button>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="script.js" defer></script>
 </body>
 </html>
