@@ -12,7 +12,8 @@
 
     <nav class="navbar">
         <div class="logo">NEB<span>Hub</span></div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#subjects">Subjects</a></li>
             <li><a href="#about">About</a></li>
@@ -93,13 +94,23 @@
         <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
         <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
     </footer>
+
     <script>
+        // Mindmap branch toggle (tap-to-expand on mobile, still hover on desktop)
         const branches = document.querySelectorAll('.branch-node');
 
         branches.forEach(function(node) {
             node.addEventListener('click', function() {
                 node.parentElement.classList.toggle('open');
             });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
         });
     </script>
 

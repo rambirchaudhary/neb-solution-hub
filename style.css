@@ -54,6 +54,38 @@ h1, h2, h3, .logo {
     color: #38bdf8;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #111827;
+        width: 200px;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 0 0 0 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 /* Hero */
 .hero {
     text-align: center;
