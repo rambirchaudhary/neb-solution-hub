@@ -93,6 +93,15 @@
         <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
         <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
     </footer>
+    <script>
+        const branches = document.querySelectorAll('.branch-node');
+
+        branches.forEach(function(node) {
+            node.addEventListener('click', function() {
+                node.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
 
 </body>
 </html>

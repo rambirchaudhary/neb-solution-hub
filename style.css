@@ -180,6 +180,10 @@ h1, h2, h3, .logo {
     max-height: 300px;
 }
 
+.branch.open .branch-content {
+    max-height: 300px;
+}
+
 .branch-content li {
     margin: 12px 0;
     display: flex;
