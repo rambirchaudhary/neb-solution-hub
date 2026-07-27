@@ -4,222 +4,192 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Physics Important Questions — NEB Solution Hub</title>
-  <meta name="description" content="Chapter-wise important physics questions for NEB Grade 12 — printable, accessible, and organized for fast revision." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Chapter-wise important physics questions for NEB Grade 12 — complete list." />
   <link rel="stylesheet" href="style.css">
   <style>
-    :root{--page-max:1100px}
-    .page-wrap{max-width:var(--page-max);margin:2.25rem auto;padding:0 1rem}
-    .breadcrumb{font-size:.95rem;color:var(--muted);margin-bottom:.75rem;display:flex;gap:.5rem;align-items:center}
-    .page-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
-    .page-title{font-family:var(--font-heading);font-size:1.6rem;margin:0}
-    .page-sub{color:var(--muted);margin-top:.25rem;font-size:.95rem}
-    .page-controls{display:flex;gap:.6rem;align-items:center}
-    .btn-compact{padding:.45rem .7rem;font-size:.95rem;border-radius:8px}
-    .content-grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:start}
-    .content{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:1.1rem;box-shadow:var(--shadow-sm)}
-    .sidebar{position:sticky;top:92px;align-self:start;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:1rem;box-shadow:var(--shadow-sm)}
-    .chapter{margin-bottom:1.25rem;border-radius:10px;padding:.8rem;transition:box-shadow .22s var(--ease)}
-    .chapter:hover{box-shadow:0 12px 30px rgba(16,24,40,0.06)}
-    .chapter h3{margin:0 0 .5rem;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center;gap:.6rem}
-    .chapter-meta{color:var(--muted);font-size:.9rem}
-    .question-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
-    .question-item{padding:.6rem;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid transparent;transition:transform .18s var(--ease),border-color .18s var(--ease);display:flex;gap:.8rem;align-items:flex-start}
-    .question-item:hover,.question-item:focus-within{transform:translateY(-4px);border-color:rgba(37,99,235,0.08);box-shadow:0 10px 30px rgba(16,24,40,0.04)}
-    .q-index{min-width:36px;height:36px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));color:#fff;font-weight:700}
-    .q-body{flex:1}
-    .q-body p{margin:0;color:var(--text)}
-    .q-tags{margin-top:.4rem;display:flex;gap:.4rem;flex-wrap:wrap}
-    .tag{font-size:.8rem;padding:.25rem .5rem;border-radius:999px;background:rgba(37,99,235,0.06);color:var(--color-primary);font-weight:600}
-    .answer{margin-top:.6rem;padding:.8rem;border-radius:8px;background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);border:1px dashed var(--border);display:none}
-    .question-item.open .answer{display:block;animation:fadeInUp .28s var(--ease) both}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-    .toc{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
-    .toc a{text-decoration:none;color:var(--muted);padding:.45rem .6rem;border-radius:8px;display:block}
-    .toc a:hover,.toc a:focus-visible{color:var(--color-primary);background:rgba(37,99,235,0.04);transform:translateX(4px)}
-    @media print{body{background:#fff;color:#000}.site-header,.site-footer,.mobile-menu,.header-actions,#toast,#back-to-top{display:none!important}.content-grid{grid-template-columns:1fr}.sidebar{display:none}.question-item{page-break-inside:avoid}}
-    @media (max-width:900px){.content-grid{grid-template-columns:1fr}.sidebar{position:static;top:auto}}
+    /* Minimal page-specific styles to ensure readability if style.css is missing */
+    :root{--muted:#6b7280;--neon:#00FF7A}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#07100A,#0B0F0A);color:#E6FFE9}
+    .container{max-width:1100px;margin:2rem auto;padding:1rem}
+    header.site-header{padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;font-weight:700}
+    h1{font-family:Poppins,system-ui,Arial,sans-serif;font-size:1.6rem;margin:0 0 .5rem}
+    .lead{color:var(--muted);margin:0 0 1rem}
+    .chapter{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.02)}
+    .chapter h2{margin:0 0 .6rem}
+    ol{margin:0 0 0 1.1rem;padding:0}
+    li{margin:0 0 .75rem;line-height:1.45}
+    .marks{display:inline-block;margin-left:.5rem;padding:.08rem .45rem;border-radius:999px;background:rgba(0,255,122,0.06);color:var(--neon);font-weight:700}
+    .controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:.45rem .6rem;border-radius:8px;text-decoration:none}
+    @media print{body{background:#fff;color:#000} header.site-header,.controls{display:none} .chapter{page-break-inside:avoid}}
   </style>
 </head>
 <body>
-  <header class="site-header" role="banner" aria-hidden="false">
-    <div class="container header-inner">
+  <header class="site-header">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
       <a href="index.html" class="logo" aria-label="NEB Solution Hub home">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#2563EB"></rect></svg>
-        <span class="brand">NEB Solution Hub</span>
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#00FF7A"></rect></svg>
+        <span>NEB Solution Hub</span>
       </a>
-      <div class="header-actions" aria-hidden="true">
-        <a href="index.html" class="btn ghost small">Back to Home</a>
+      <div>
+        <a href="index.html" class="btn">Back to Home</a>
       </div>
     </div>
   </header>
 
-  <main id="main" class="page-wrap" tabindex="-1">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a> ›
-      <a href="index.html#subjects">Subjects</a> ›
-      <span aria-current="page">Physics Important Questions</span>
-    </nav>
+  <main class="container" id="main">
+    <h1>Physics — Important Questions (NEB Grade 12)</h1>
+    <p class="lead">Complete chapter-wise list of important questions extracted from the provided PDF.</p>
 
-    <div class="page-header">
-      <div>
-        <h1 class="page-title">Physics — Important Questions</h1>
-        <div class="page-sub">Curated important questions for quick revision and exam practice.</div>
-      </div>
-
-      <div class="page-controls">
-        <button id="print-btn" class="btn btn-compact ghost" title="Print this page">Print</button>
-        <button id="expand-all" class="btn btn-compact ghost" title="Expand all answers">Expand All</button>
-        <button id="collapse-all" class="btn btn-compact ghost" title="Collapse all answers">Collapse All</button>
-      </div>
+    <div class="controls" role="toolbar" aria-label="Page controls">
+      <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+      <a href="#main" class="btn">Top</a>
     </div>
 
-    <div class="content-grid">
-      <section class="content" aria-labelledby="content-heading">
-        <h2 id="content-heading" class="sr-only">Important Questions content</h2>
+    <!-- Fluid Mechanics -->
+    <section id="fluid-mechanics" class="chapter" aria-labelledby="fluid-title">
+      <h2 id="fluid-title">Fluid Mechanics</h2>
+      <ol>
+        <li>What is surface tension? Does it depend on surface area of fluid? Prove that the surface energy and surface tension are numerically equal. <span class="marks">[1+1+3]</span></li>
+        <li>State Pascal's law. How fluid pressure is independent of area of container. To what height should a cylindrical vessel be filled with a liquid to make the force on the side of vessel will be equal to the force on the bottom of the vessel. <span class="marks">[1+2+2]</span></li>
+        <li>State Pascal's law. Prove that fluid pressure is = ρgh where the symbol carries usual meaning. A tube of uniform cross-section has two vertical portions connected with a horizontal thin tube 8 cm long at their lower ends. Enough water to occupy 22 cm of the tube is poured into one branch enough and enough oil of specific gravity 0.8 to occupy 22 cm is poured into the other find the position of the common surface of the two liquids. <span class="marks">[1+2+2]</span></li>
+        <li>State Archimedes principle. Is it applicable for floating object? A piece of alloy of copper (ρ = 8.9) and zinc (ρ = 7.1) weighs 12.9 g in air completely immersed in water resulting weight 11.3 g in water. Find the fraction of mass metal in alloy. <span class="marks">[1+1+3]</span></li>
+        <li>State law of floatation. Is body in equilibrium in floatation? A piece of cube of wood supporting a 200 g mass just floats in water. When the mass is removed, the cube rises by 2 cm. what is the size of cube? <span class="marks">[1+2+2]</span></li>
+        <li>Define streamlined flow. How does streamlined flow turns into turbulent? It is desired to design an airplane such that the lift force is 1000 N per square meter of wing area. If the velocity of air passing along the lower surface of the wing is 150 m/s, what should be the velocity of air over the upper surface of the wing? (ρ = 1.3 kg/m³) <span class="marks">[1+1+3]</span></li>
+        <li>What is viscosity of fluid. How does it change with temperature? An air bubble of radius 1 cm rises with constant speed of 3.5 mm/s through a liquid of density of 1.75 × 10³ kg m⁻³, find the coefficient of viscosity of liquid. Neglect the density of air. <span class="marks">[1+1+3]</span></li>
+      </ol>
+    </section>
 
-        <!-- Fluid Mechanics -->
-        <article id="ch-fluid" class="chapter reveal" aria-labelledby="ch-fluid-title">
-          <h3 id="ch-fluid-title">Fluid Mechanics <span class="chapter-meta">Questions: 7</span></h3>
-          <ol class="question-list" role="list">
-            <li class="question-item" tabindex="0">
-              <div class="q-index">1</div>
-              <div class="q-body">
-                <p><strong>Define surface tension and state whether it depends on the surface area of a liquid. Show that the surface energy per unit area of a liquid is numerically equal to its surface tension.</strong> <span class="marks">[1+1+3]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Surface tension is the force per unit length acting along the surface that tends to minimize surface area. It is independent of total surface area; surface energy per unit area equals surface tension because work done to increase area by dA is γ dA.</p></div>
-              </div>
-            </li>
+    <!-- Heat & Thermodynamics -->
+    <section id="heat-thermodynamics" class="chapter" aria-labelledby="heat-title">
+      <h2 id="heat-title">Heat & Thermodynamics</h2>
+      <ol>
+        <li>What is meant by thermodynamical variable? What comprises internal energy of system? Water falls from 350 m high, find the temperature change assuming that the whole of energy due to fall converted into heat. (c = 4200 J/kg·K). <span class="marks">[1+2+2]</span></li>
+        <li>What is molar heat capacity of gas? Why is the molar heat capacity at constant pressure more that constant volume? 105 calories of heat is required to raise the temperature of 3 moles of ideal gas at constant pressure from 25°C to 30°C. Calculate the amount of heat required to raise the temperature of same gas through the same range of temperature at constant volume. <span class="marks">[1+2+2]</span></li>
+        <li>What do you mean by isothermal process. Derive relation to find work done by gas expanded from pressure P1 to P2 at constant temperature T. If 5 moles of gas at 1 atm is expanded isothermally from 5 litre to 50 litre at constant temperature of 20°C, find the work done by the gas. <span class="marks">[1+2+2]</span></li>
+        <li>State the significance of first law of thermodynamics. In constant-volume process, ΔQ = ΔU holds true but in constant-pressure process ΔQ = ΔU + PΔV is not the same as ΔU, why? Two mole of ideal gas is heated from 250 K to 500 K at constant pressure. Draw P-V diagram for the process and calculate the work done. <span class="marks">[1+2+1+1]</span></li>
+        <li>State the significance P-V diagram in thermodynamics. The P-V diagram alongside shows a process involving 0.45 mol of ideal gas. What is the temperature at point "A" and "B"? How much work was done by or on the gas in this process. How much heat is to be supplied to increase the internal energy of gas by 15000 J? <span class="marks">[2+3]</span></li>
+        <li>What do you mean by adiabatic process. The equation of state of adiabatic process can be expressed as \(PV^\gamma = \text{constant}\). Using this relation show that the work done in the process is given by \(W = \dfrac{P_1V_1 - P_2V_2}{\gamma - 1}\), where the symbol carries usual meaning. During adiabatic expansion of \(\gamma - 1\) 0.5 mol of Argon gas the temperature falls to 70 K from 520 K, find the work done. <span class="marks">[1+2+2]</span></li>
+        <li>State Kelvin's statement of second law of thermodynamics. If a Carnot's engine is operating between temperature T1 and T2, what is its efficiency? A heat engine absorbs 500 calories heat from source at 200°C and rejects 200 calories to the sink whose efficiency is 75%. Find the temperature of sink and by what magnitude the sink be lowered so that efficiency reaches 85%. <span class="marks">[1+1+3]</span></li>
+        <li>What is petrol engine? Why is spark plug is needed in petrol engine? Sketch the P-V diagram for Otto cycle. Write the relation of efficiency of petrol engine in term of compression ratio. <span class="marks">[1+1+2+1]</span></li>
+        <li>A P-V diagram of an engine is present alongside, which engine does it represent? Explain why? What does a straight line "represent? Does this type of engine require spark plug, why/why not? Explain. <span class="marks">[2+2+1]</span></li>
+        <li>What do you mean by coefficient of performance of refrigerator? Why is external agency needed to operate the refrigerator? A refrigerator absorbs 200 J of heat and power supply delivers 100 J of work to the machine. What is the co-efficient of performance of the machine? <span class="marks">[1+2+2]</span></li>
+        <li>What is meant by entropy? Introduce the concept of entropy from first law of thermodynamics. Find the entropy of change in melting 1 kg of ice at 0°C to the same temperature. <span class="marks">[1+2+2]</span></li>
+        <li>Why is expansion stroke of engine called power stroke? Why should compression ratio be more in diesel engine? A petrol engine consumes 5 kg petrol per hour. If the power of engine 20 KW and calorific value of petrol is \(11 \times 10^3\) kcal per kg. Calculate efficiency of engine. <span class="marks">[1+1+3]</span></li>
+      </ol>
+    </section>
 
-            <li class="question-item" tabindex="0">
-              <div class="q-index">2</div>
-              <div class="q-body">
-                <p><strong>State Pascal's law and explain why fluid pressure does not depend on the cross-sectional area of its container. For a cylindrical vessel, determine the height to which it must be filled with liquid so that the force exerted on its curved side equals the force exerted on its base.</strong> <span class="marks">[1+2+2]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Pascal's law: pressure applied to an enclosed fluid is transmitted undiminished. Pressure at depth depends on height, not area. (Derivation and algebraic solution omitted here for brevity.)</p></div>
-              </div>
-            </li>
-
-            <li class="question-item" tabindex="0">
-              <div class="q-index">3</div>
-              <div class="q-body">
-                <p><strong>State Pascal's law and derive P = ρgh. A uniform tube has two vertical arms joined by a horizontal section 8 cm long at the bottom. Water filling 22 cm of one arm is poured in, and oil of specific gravity 0.8 filling 22 cm is poured into the other arm. Determine the position of the interface between the two liquids.</strong> <span class="marks">[1+2+2]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Pressure at depth: P = ρgh. For the interface, equate pressures at the same horizontal level; solve for interface height using densities ρ_water and ρ_oil (ρ_oil = 0.8 ρ_water).</p></div>
-              </div>
-            </li>
-
-            <li class="question-item" tabindex="0">
-              <div class="q-index">4</div>
-              <div class="q-body">
-                <p><strong>State Archimedes' principle and discuss whether it applies to floating bodies. An alloy made of copper (density 8.9 g/cm³) and zinc (density 7.1 g/cm³) weighs 12.9 g in air and 11.3 g when fully submerged in water. Calculate the mass fraction of each metal in the alloy.</strong> <span class="marks">[1+1+3]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Archimedes' principle: buoyant force equals weight of displaced fluid. Use apparent weight loss to compute displaced water mass and solve simultaneous equations for mass fractions of copper and zinc.</p></div>
-              </div>
-            </li>
-
-            <li class="question-item" tabindex="0">
-              <div class="q-index">5</div>
-              <div class="q-body">
-                <p><strong>State the law of floatation and comment on whether a floating body is in equilibrium. A wooden cube, loaded with a 200 g mass, just floats in water. When the mass is removed, the cube rises by 2 cm. Find the dimensions of the cube.</strong> <span class="marks">[1+2+2]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Law of floatation: weight of floating body equals weight of displaced fluid. Use change in submerged depth to compute cube volume and side length.</p></div>
-              </div>
-            </li>
-
-            <li class="question-item" tabindex="0">
-              <div class="q-index">6</div>
-              <div class="q-body">
-                <p><strong>Define streamline flow and explain the conditions under which it becomes turbulent. An aircraft wing is to be designed to produce a lift of 1000 N per square metre of wing area. If air moves at 150 m/s beneath the wing, find the required air speed above the wing. (Take air density = 1.3 kg/m³)</strong> <span class="marks">[1+1+3]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Streamline (laminar) flow: fluid particles follow smooth paths; turbulence occurs at high Reynolds number. Use Bernoulli's principle to relate pressures and velocities to find required speed above wing.</p></div>
-              </div>
-            </li>
-
-            <li class="question-item" tabindex="0">
-              <div class="q-index">7</div>
-              <div class="q-body">
-                <p><strong>Define the viscosity of a fluid and describe how it varies with temperature. An air bubble of radius 1 cm rises at a constant velocity of 3.5 mm/s through a liquid of density 1.75 × 10³ kg/m³. Calculate the coefficient of viscosity of the liquid, ignoring the density of air.</strong> <span class="marks">[1+1+3]</span></p>
-                <div class="answer" aria-hidden="true"><p><strong>Answer (concise):</strong> Viscosity measures internal friction; typically decreases with temperature for liquids. Use Stokes' law for terminal velocity of a sphere to compute viscosity: η = (2/9) (ρ_l - ρ_g) g r² / v (approx.).</p></div>
-              </div>
-            </li>
+    <!-- Magnetic Effect of Current -->
+    <section id="magnetic-effect" class="chapter" aria-labelledby="magnetic-title">
+      <h2 id="magnetic-title">Magnetic Effect of Current</h2>
+      <ol>
+        <li>The magnetic force experienced by a charged particle is \( \mathbf{F} = q(\mathbf{v} \times \mathbf{B}) \). Justify that a proton entering in the magnetic field perpendicular to its velocity traces a circle. Can that proton experience a zero force while moving inside the magnetic field, how? Find the force experienced by a wire of length 5 m carrying a current of 2 A inside magnetic field of 2 T such that the area vector of cross-section wire is parallel to the current. <span class="marks">[2+2+1]</span></li>
+        <li>What is Right-Thumb rule in magnetism? Explain. Show that the magnetic force experienced by a charged particle inside magnetic field is \( \mathbf{F} = q(\mathbf{v} \times \mathbf{B}) \), where the symbol carries usual meaning. Use this expression to define 1 T magnetic field at a point. <span class="marks">[1+3+1]</span></li>
+        <li>State right hand palm rule of magnetic force. A student claims that the magnetic force on particle does no work however produces torque, explain how is it possible. An electron moves in the magnetic field with velocity \(2 \times 10^6\) m/s in the field region of \(7.6 \times 10^{-2}\) T in an unspecified direction. Find the maximum and minimum possible force on it. <span class="marks">[1+2+2]</span></li>
+        <li>What is Lorentz force? A student claims that the lightning having current in the order of \(10^5\) A strikes the metal flag and the pole is bent, is student correct, how? A flat square surface with side length 3.00 cm is in xy-plane at z = 0. Calculate the magnitude of flux through the surface by the field of \( \mathbf{B} = 0.225 \hat{\imath} + 0.350 \hat{\jmath} - 0.500 \hat{k} \). <span class="marks">[1+2+2]</span></li>
+        <li>A rectangular coil of length l and breadth b carries a current I inside uniform magnetic field B.
+          <ol>
+            <li>What is the force experienced by each arm of coil. <span class="marks">[2]</span></li>
+            <li>Is this force capable of producing torque? Justify with calculation. <span class="marks">[2]</span></li>
+            <li>How is this useful in construction of moving coil galvanometer? Explain. <span class="marks">[2]</span></li>
+            <li>Why is magnetic field of galvanometer made radial? <span class="marks">[2]</span></li>
           </ol>
-        </article>
+        </li>
+        <li>What happens if a current carrying specimen is placed in magnetic field such that the magnetic field and current are perpendicular to each other? A copper strip of thickness 2 mm and breadth of 2 cm carries a current 0.1 A and it is placed in magnetic field of 2 T such that current is perpendicular magnetic field. The voltage difference across the upper and lower surface is 2 μV then find current density, electric field and hence the electron concentration. <span class="marks">[2+3]</span></li>
+        <li>State Biot–Savart's law. For what kind of current, it is useful? Use it to find the magnetic field at the center due to a current carrying circular coil. If the magnetic field produced at the center of a coil of 500 turns carrying 0.2 A current is 2.5 mT. Find the diameter of coil. <span class="marks">[1+2+2]</span></li>
+        <li>State Ampere's circuital law. Use it to find the magnetic field at the center of solenoid of length l having n turns of coil per unit length carrying current I in each turn. A MRI machine possesses 5 million turns of insulated copper wire of radius 0.5 m. To diagnose the issue of a person in spinal cord, radiographer passes the current of 7.25 A in the coil. What is the magnetic field experienced by the body of patient lying in the center of the MRI machine? <span class="marks">[1+2+2]</span></li>
+        <li>Define 1 A current in terms of magnetic force. Why parallel conductors carrying current in same direction attracts each other? Two parallel wires separated at distance 2.5 m exerts a force of \(5 \times 10^{-5}\) N per meter on each other and one of them carries 0.5 A current, what's the current in other? Is the current in this wire is same? <span class="marks">[1+2+2]</span></li>
+      </ol>
+    </section>
 
-        <!-- Additional chapters (Heat, Magnetic, EM, AC, Wave, Radioactivity, Trends) follow same pattern -->
-        <!-- For brevity in this file preview, remaining chapters are included in full in your project file. -->
-      </section>
+    <!-- Electromagnetic Induction -->
+    <section id="em-induction" class="chapter" aria-labelledby="em-title">
+      <h2 id="em-title">Electromagnetic Induction</h2>
+      <ol>
+        <li>State Faraday's law of electromagnetic induction. A bicycle spoke is spinning inside magnetic field such that the length of spoke is normal to field, how much induced emf will be produced. A plane of wing 40 m is travelling due north through magnetic field of \(5 \times 10^{-4}\) T (vertical component of Earth) at velocity of 500 m/s, what is the voltage developed across the wing. <span class="marks">[1+2+2]</span></li>
+        <li>What do you mean by self-induction? What will be the self-induction of solenoid of N turns and radius r carrying current I. A 60 V constant self-induced emf is to be maintained in a coil of 2 H self-inductance, how is it possible? <span class="marks">[1+2+2]</span></li>
+        <li>What is mutual induction? How is it useful in transformer? A secondary coil maintains 400 V when there is change of current in primary coil from 0 to 5 A in 0.02 s. Find the coefficient of mutual induction of coil. <span class="marks">[1+2+2]</span></li>
+        <li>What do you mean by electromagnetic induction? What will be the induced current in a closed loop having number of turns N that suffers the flux change Φ1 to Φ2 in the interval of t. Develop the relation to find the induced emf in a straight metal of length l moving in uniform magnetic field B with velocity v making angle θ with magnetic field. <span class="marks">[1+1+3]</span></li>
+        <li>State Lenz's law? How is it useful in understanding of electromagnetic induction? Does it hold good for conservation of energy? <span class="marks">[1+2+2]</span></li>
+        <li>What do you mean by self-inductance? Develop the relation to find self-inductance of ideal solenoid. An air cored solenoid of length 0.5 m and radius 2 cm has 100 turns per cm, what is its self-inductance? <span class="marks">[1+2+2]</span></li>
+        <li>State Faraday's law of electromagnetic induction. How a student can use Faraday's law of electromagnetic induction to find the induced emf in a rotating coil placed in uniform magnetic field, develop the relation and state the nature of induced emf and current. Class 12 students were asked to find the number of turns of coil of dimension 75 cm × 1.5 m used in generator that produces 220 V (at maximum) required for college during power cut. Student are given that the uniform magnetic field inside generator to be 0.75 tesla and frequency of rotation to be 1500 revolution per minute. <span class="marks">[1+3+1+3]</span></li>
+        <li>What is transformer? How is it useful in long-distance power transmission? A primary coil maintain 200 V has current 5 A and it transmit power at its 85% efficiency at same voltage. What is the current in secondary coil? <span class="marks">[1+2+2]</span></li>
+        <li>Explain how solenoid stores energy when time varying current is passed through it. The energy stored in solenoid is given by \(U = \tfrac{1}{2} L I^2\). Use it to prove the energy density is \(u = \tfrac{1}{2} \mu_0 n^2 I^2\). A solenoid of self-inductance 500 mH and radius 15 mm carries a steady current 2 A, what is the energy stored? Find the energy density too. <span class="marks">[1+2+2]</span></li>
+      </ol>
+    </section>
 
-      <aside class="sidebar" aria-labelledby="toc-heading">
-        <h3 id="toc-heading" class="sr-only">Table of contents</h3>
-        <nav aria-label="Table of contents">
-          <ul class="toc">
-            <li><a href="#ch-fluid">Fluid Mechanics</a></li>
-            <li><a href="#ch-heat">Heat &amp; Thermodynamics</a></li>
-            <li><a href="#ch-magnetic">Magnetic Effect of Current</a></li>
-            <li><a href="#ch-em">Electromagnetic Induction</a></li>
-            <li><a href="#ch-ac">Alternating Current</a></li>
-            <li><a href="#ch-wave">Wave Optics</a></li>
-            <li><a href="#ch-radio">Radioactivity</a></li>
-            <li><a href="#ch-trends">Recent Trends</a></li>
-          </ul>
-        </nav>
+    <!-- Alternating Current (AC) -->
+    <section id="ac" class="chapter" aria-labelledby="ac-title">
+      <h2 id="ac-title">Alternating Current (AC)</h2>
+      <ol>
+        <li>What is phasor? How can one represent alternating current with help of phasor? Why is rms value of AC is more useful (meaningful) in daily life than mean value? <span class="marks">[1]</span></li>
+        <li>What is inductive reactance? How is it useful in household appliances to reduce power consumption? An AC (220 V, 50 Hz) is applied across the heater of 5 Ω resistance and the current should be maintained at 0.2 A, what should be the inductance of coil connected in series with resistor? <span class="marks">[1]</span></li>
+        <li>The diagram alongside is the phasor of L-R circuit, is current leading the voltage? Why? The current amplitude in pure inductor of a radio receiver is to be 250 mA when the voltage amplitude is 3.60 V at frequency of 1.60 MHz, what is the inductive reactance of coil and self-inductance of coil. <span class="marks">[1+2+2]</span></li>
+        <li>What is electrical resonance? How do you achieve it in L-C-R series circuit? Obtain the expression for resonant frequency of such circuit. A radio possesses a resistor of 5 Ω, capacitor of 850 pF and inductor of 0.25 H, at what frequency the radio will be tuned? Find the power of the circuit, current during tuning, phase angle between current and voltage too? <span class="marks">[1+2+2+3]</span></li>
+        <li>An AC Emf is represented by \(E = 220 \sin(314t)\), state the nature of current. Justify that this current can pass through capacitor. Find the peak voltage and capacitive reactance developed by the given AC supply in capacitor of 2 μF. <span class="marks">[1+2+2]</span></li>
+        <li>Define wattless current. Justify that an ideal solenoid consumes no power when current passes through it. How are quality factor and power factor differing, explain? <span class="marks">[1+2+2]</span></li>
+        <li>The impedance of L-C-R series is given by \(Z = \sqrt{R^2 + (X_L - X_C)^2}\) then sketch the variation of impedance with frequency. Can impedance of L-C-R circuit be zero, explain. If 220 V be the rms voltage of supply is connected to L-C-R series circuit having resistance 50 Ω, what is the current in circuit during resonance. <span class="marks">[1+2+2]</span></li>
+      </ol>
+    </section>
 
-        <hr style="margin:1rem 0;border:none;border-top:1px solid var(--border)">
+    <!-- Wave Optics -->
+    <section id="wave-optics" class="chapter" aria-labelledby="wave-title">
+      <h2 id="wave-title">Wave Optics</h2>
+      <ol>
+        <li>What do you mean by wavefront? How can we produce plane wavefront? Use wave concept of light to prove the refraction phenomenon. <span class="marks">[1+1+3]</span></li>
+        <li>What is wave-particle duality of light mean? State the Huygens concept of light propagation and use to prove reflection of light. <span class="marks">[1+2+2]</span></li>
+        <li>What do you mean by coherent light? How can we produce coherent light? The phase difference of interfering wave in Young's Double slit experiment is \(\Delta \phi = \dfrac{2\pi}{\lambda} \Delta x\), where the symbol has their usual meaning. Use it to show the fringe width of bright and dark band are same. <span class="marks">[1+1+3]</span></li>
+        <li>What is diffraction of light. How is primary maximum produced in single slit diffraction? How wide is the central maximum peak on a screen 3 m behind a 0.01 mm slit is illuminated by 500 nm light source? <span class="marks">[1+2+2]</span></li>
+        <li>Why is diffraction of light is not evident in our daily life however we observe sound diffraction. In single slit diffraction, the angular location of nth secondary minimum is \(d \sin \theta = n \lambda\), where the symbol carries their usual meaning. Use it to find the angular width of central maximum and prove that the central maximum has width double the width of first secondary maximum. <span class="marks">[2+3]</span></li>
+        <li>What is diffraction grating? How is grating considered as multiple slit diffraction? A light of wavelength 5792 Å is used to determine the grating element of unknown diffraction grating and third order spectrum is measured at an angle of 60° 30' through spectrometer when the light fall normally on grating. Find grating element. <span class="marks">[1+2+2]</span></li>
+        <li>What is meant by resolving power of instrument? Describe the Rayleigh criteria for resolution of objects. James Webb space satellite has disc of 6.5 m diameter and operates at smallest wavelength of 0.6 μm. Find its resolving power. <span class="marks">[1+2+2]</span></li>
+        <li>Light is transverse in nature, how is polarizer useful to understand it? Explain. State and explain the principle described by the diagram alongside. A parallel beam of unpolarized light is incident at angle of 55° on the surface of glass and undergone complete polarization. What is the refractive index of glass and angle of refraction in glass? <span class="marks">[3+3+2]</span></li>
+      </ol>
+    </section>
 
-        <div>
-          <p class="muted" style="margin:0 0 .6rem">Quick actions</p>
-          <button id="download-pdf" class="btn ghost small btn-compact" title="Download PDF">Download PDF</button>
-          <a href="index.html#subjects" class="btn ghost small btn-compact" style="display:block;margin-top:.6rem">Back to Subjects</a>
-        </div>
-      </aside>
-    </div>
+    <!-- Radioactivity -->
+    <section id="radioactivity" class="chapter" aria-labelledby="radio-title">
+      <h2 id="radio-title">Radioactivity</h2>
+      <ol>
+        <li>A particle is equivalent to electron however it's not an electron, how? In an experiment of decay of radio-active materials, three particles A, B and C were observed in an electric or magnetic field. Name the particles A and B with justification. Explain why the particle C remained undeviated? <span class="marks">[1+1+2+1]</span></li>
+        <li>
+          <ol type="i">
+            <li>State the law of radio-activity. <span class="marks">[1]</span></li>
+            <li>Use this law and develop the relation \(N = N_0 e^{-\lambda t}\) where symbol has their usual meaning. <span class="marks">[3]</span></li>
+            <li>Develop the relation for half-life from above equation. <span class="marks">[2]</span></li>
+            <li>A radio-active substance undergone decay at the rate of 1200 dis/sec to 120 dis/sec in 10 days. Find the decay constant and half-life of the substance. <span class="marks">[2]</span></li>
+          </ol>
+        </li>
+        <li>
+          <ol type="i">
+            <li>Define one curie. <span class="marks">[1]</span></li>
+            <li>What does the graph alongside represent. Write the equation that satisfies the curve. <span class="marks">[1+1]</span></li>
+            <li>From graph, calculate half-life and mean life of substance. <span class="marks">[3]</span></li>
+            <li>If 5 million particles of this substance is allowed to decay then how many particles be decayed after 300 seconds? <span class="marks">[2]</span></li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Recent Trends -->
+    <section id="recent-trends" class="chapter" aria-labelledby="trends-title">
+      <h2 id="trends-title">Recent Trends</h2>
+      <ol>
+        <li>What is seismic wave? How does P and S wave carry energy from hypocenter to epicenter? Why is Love wave more hazardous, explain. <span class="marks">[1+2+2]</span></li>
+        <li>What is nano-technology? Discuss the advantages of nano-technology over other current technology of material and explain the application of it in future. <span class="marks">[1]</span></li>
+      </ol>
+    </section>
+
+    <footer style="margin-top:1.5rem;color:var(--muted);font-size:.95rem">
+      <p>&copy; <span id="year"></span> NEB Solution Hub. Built by Rambir.</p>
+      <p>Contact: <a href="mailto:rambirchaudhary212@gmail.com" style="color:var(--muted)">rambirchaudhary212@gmail.com</a></p>
+    </footer>
   </main>
 
-  <footer class="site-footer" role="contentinfo" aria-hidden="false">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo small" aria-label="NEB Solution Hub home">
-          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#2563EB"></rect></svg>
-          <span class="brand">NEB Solution Hub</span>
-        </a>
-        <p class="muted">Premium NEB resources for Grade 11 & 12 students.</p>
-      </div>
-
-      <div class="footer-bottom" style="grid-column:1/-1;padding-top:1rem;">
-        <div class="container"><p class="muted">© <span id="current-year-footer"></span> NEB Solution Hub. Built by Rambir.</p></div>
-      </div>
-    </div>
-  </footer>
-
   <script>
-    (function () {
-      const qs = (s, ctx = document) => (ctx || document).querySelector(s);
-      const qsa = (s, ctx = document) => Array.from((ctx || document).querySelectorAll(s));
-      const showToast = window.showToast || ((msg) => { console.log('Toast:', msg); });
-
-      qsa('.question-item').forEach(item => {
-        item.addEventListener('click', (e) => {
-          if (e.target.closest('a') || e.target.closest('button')) return;
-          item.classList.toggle('open');
-          const ans = item.querySelector('.answer');
-          if (ans) ans.setAttribute('aria-hidden', String(!item.classList.contains('open')));
-        });
-        item.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
-      });
-
-      qs('#expand-all')?.addEventListener('click', () => { qsa('.question-item').forEach(i => { i.classList.add('open'); i.querySelector('.answer')?.setAttribute('aria-hidden', 'false'); }); showToast('All answers expanded'); });
-      qs('#collapse-all')?.addEventListener('click', () => { qsa('.question-item').forEach(i => { i.classList.remove('open'); i.querySelector('.answer')?.setAttribute('aria-hidden', 'true'); }); showToast('All answers collapsed'); });
-      qs('#print-btn')?.addEventListener('click', () => window.print());
-      qsa('.toc a').forEach(a => { a.addEventListener('click', (e) => { e.preventDefault(); const target = document.querySelector(a.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(() => { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }, 450); } }); });
-      qs('#download-pdf')?.addEventListener('click', () => { showToast('Use your browser Print → Save as PDF to download this page.'); window.print(); });
-      const revealEls = qsa('.reveal');
-      if ('IntersectionObserver' in window && revealEls.length) {
-        const obs = new IntersectionObserver((entries, o) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); entry.target.style.opacity = 1; entry.target.style.transform = 'translateY(0)'; o.unobserve(entry.target); } }); }, { threshold: 0.12 });
-        revealEls.forEach(el => { el.style.opacity = 0; el.style.transform = 'translateY(12px)'; obs.observe(el); });
-      } else { revealEls.forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; }); }
-      const yearEl = qs('#current-year-footer'); if (yearEl) yearEl.textContent = new Date().getFullYear();
-      document.addEventListener('keydown', (e) => { if (e.key === 'Tab') document.documentElement.classList.add('using-keyboard'); });
-      document.addEventListener('mousedown', () => document.documentElement.classList.remove('using-keyboard'));
-    })();
+    // small helper to set year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <script src="script.js" defer></script>
 </body>
 </html>
