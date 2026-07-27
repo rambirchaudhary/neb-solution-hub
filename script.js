@@ -428,3 +428,37 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(hideLoadingScreen, 600);
   if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
 });
+
+function initLoginModal() {
+  const loginBtn = document.getElementById('login-btn');
+  const modal = document.getElementById('login-modal');
+  const overlay = modal?.querySelector('.modal-overlay');
+  const closeBtn = document.getElementById('close-login');
+  const form = document.getElementById('login-form');
+
+  if (!loginBtn || !modal) return;
+
+  function openModal() {
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('login-email')?.focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    loginBtn.focus();
+  }
+
+  loginBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+  overlay?.addEventListener('click', closeModal);
+  closeBtn?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    showToast('Login submitted (demo only)');
+    closeModal();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initLoginModal);

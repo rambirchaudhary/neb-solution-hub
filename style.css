@@ -277,3 +277,58 @@ a:focus-visible,button:focus-visible,input:focus-visible{box-shadow:var(--focus-
   *{animation-duration:var(--reduced-motion)!important;animation-iteration-count:1!important;transition-duration:var(--reduced-motion)!important;scroll-behavior:auto!important}
   .ripple{display:none}
 }
+
+/* Modal base */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal[hidden] { display: none; }
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-md);
+  animation: fadeInUp .3s var(--ease);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-header h2 { margin: 0; font-family: var(--font-heading); }
+
+.modal-form {
+  display: grid;
+  gap: 1rem;
+}
+.modal-form label { font-weight: 600; }
+.modal-form input {
+  padding: .6rem .8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.modal-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: .9rem;
+}
+
