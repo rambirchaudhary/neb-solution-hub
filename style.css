@@ -287,6 +287,60 @@ h1, h2, h3, .logo {
     vertical-align: middle;
 }
 
+/* Sub-branches (Notes / Past Year Questions) */
+.sub-branch {
+    list-style: none;
+    margin: 12px 0 !important;
+}
+
+.sub-node {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.sub-node::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.sub-node::after {
+    content: "▸";
+    margin-left: 8px;
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+.sub-branch.open .sub-node::after {
+    transform: rotate(90deg);
+}
+
+.sub-node:hover {
+    color: var(--color-accent);
+}
+
+.sub-content {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 25px;
+    border-left: 1px dashed var(--color-border);
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+.sub-branch.open .sub-content {
+    max-height: 400px;
+}
+
 /* About */
 .about {
     padding: 80px 40px;
