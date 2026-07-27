@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Solution Hub</title>
+    <title>NEB Solution Hub — Grade 12 Study Resources</title>
+    <meta name="description" content="Free notes, books, important questions, MCQs and past papers for NEB Grade 12 students in Nepal.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">NEB<span>Hub</span></div>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero" id="home">
+    <!-- Hero -->
+    <header class="hero reveal" id="home">
         <h1 class="glow">Welcome to NEB Solution Hub</h1>
         <p>Your one-stop platform for Grade 11 and Grade 12 study resources.</p>
         <a href="#subjects" class="btn">Explore Subjects</a>
     </header>
 
-    <section class="subjects" id="subjects">
+    <!-- Subjects / Mindmap -->
+    <section class="subjects reveal" id="subjects">
         <h2>Subjects Covered</h2>
         <div class="mindmap">
             <div class="mindmap-center">NEB Hub</div>
@@ -143,14 +148,88 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <!-- FAQ -->
+    <section class="faq reveal" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is NEB Solution Hub free to use?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, completely free. All notes, books, and question sets are freely accessible — no sign-up or payment required.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I download a subject's book?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tap on a subject in the mindmap above, then tap "Book." It opens directly in your browser via Google Drive, where you can read it or download it.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Which grades does this site currently cover?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Right now, NEB Solution Hub focuses on Grade 12. Grade 11 resources are planned for a future update.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Some resources say "Coming Soon" — when will they be ready?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>This site is actively being built out chapter by chapter. Physics Important Questions are live now, with Notes, MCQs, and Past Year Questions being added progressively across all subjects.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    I found an error, or want to suggest content — how do I reach out?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Email or call using the contact details in the footer below — every suggestion genuinely helps improve the site for other students too.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about reveal" id="about">
+        <h2>About This Page</h2>
+        <p class="about-text">
+            NEB Solution Hub is built to help Grade 11 and Grade 12 students across Nepal
+            prepare for their exams with confidence. Our goal is to provide clear notes,
+            solved questions, diagrams, model questions, MCQs, and past papers in one
+            organized place — so students spend less time searching and more time learning.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="reveal" id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a></p>
         <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
         <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
     </footer>
 
-   <script>
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Mindmap branch toggle
         const branches = document.querySelectorAll('.branch-node');
         branches.forEach(function(node) {
             node.addEventListener('click', function() {
@@ -158,6 +237,7 @@
             });
         });
 
+        // Nested sub-branch toggle (Notes / Past Year Questions)
         const subNodes = document.querySelectorAll('.sub-node');
         subNodes.forEach(function(node) {
             node.addEventListener('click', function(e) {
@@ -166,12 +246,48 @@
             });
         });
 
+        // Hamburger menu toggle
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
         hamburger.addEventListener('click', function() {
             navLinks.classList.toggle('active');
         });
-    </script> 
+
+        // FAQ accordion toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(function(item) {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                item.classList.toggle('open');
+            });
+        });
+
+        // Scroll reveal using IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 </html>
