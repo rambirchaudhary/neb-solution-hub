@@ -590,3 +590,67 @@ footer .copyright {
     body { background: #fff; color: #000; }
     .chapter-block { page-break-inside: avoid; }
 }
+
+/* Past Year Question pages */
+.group-label {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mcq-options {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 20px;
+    margin-top: 10px;
+    padding-left: 0 !important;
+}
+
+.mcq-options li {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    counter-increment: none;
+}
+
+.mcq-options li::before {
+    content: none !important;
+}
+
+.pyq-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px 0;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background-color: #fff;
+    padding: 10px;
+}
+
+.or-divider {
+    text-align: center;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin: 25px 0;
+    position: relative;
+}
+
+.or-divider::before, .or-divider::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background-color: var(--color-border);
+    vertical-align: middle;
+    margin: 0 12px;
+}
