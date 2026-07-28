@@ -1,195 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Physics Important Questions — NEB Solution Hub</title>
-  <meta name="description" content="Chapter-wise important physics questions for NEB Grade 12 — complete list." />
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Minimal page-specific styles to ensure readability if style.css is missing */
-    :root{--muted:#6b7280;--neon:#00FF7A}
-    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#07100A,#0B0F0A);color:#E6FFE9}
-    .container{max-width:1100px;margin:2rem auto;padding:1rem}
-    header.site-header{padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,0.03)}
-    .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;font-weight:700}
-    h1{font-family:Poppins,system-ui,Arial,sans-serif;font-size:1.6rem;margin:0 0 .5rem}
-    .lead{color:var(--muted);margin:0 0 1rem}
-    .chapter{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.02)}
-    .chapter h2{margin:0 0 .6rem}
-    ol{margin:0 0 0 1.1rem;padding:0}
-    li{margin:0 0 .75rem;line-height:1.45}
-    .marks{display:inline-block;margin-left:.5rem;padding:.08rem .45rem;border-radius:999px;background:rgba(0,255,122,0.06);color:var(--neon);font-weight:700}
-    .controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:.45rem .6rem;border-radius:8px;text-decoration:none}
-    @media print{body{background:#fff;color:#000} header.site-header,.controls{display:none} .chapter{page-break-inside:avoid}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Important Questions — NEB Solution Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-      <a href="index.html" class="logo" aria-label="NEB Solution Hub home">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#00FF7A"></rect></svg>
-        <span>NEB Solution Hub</span>
-      </a>
-      <div>
-        <a href="index.html" class="btn">Back to Home</a>
-      </div>
-    </div>
-  </header>
 
-  <main class="container" id="main">
-    <h1>Physics — Important Questions (NEB Grade 12)</h1>
-    <p class="lead">Complete chapter-wise list of important questions extracted from the provided PDF.</p>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">NEB<span>Hub</span></a></div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="controls" role="toolbar" aria-label="Page controls">
-      <button onclick="window.print()" class="btn">Print / Save as PDF</button>
-      <a href="#main" class="btn">Top</a>
+    <div class="page-header">
+        <h1>Physics — Important Questions</h1>
+        <p>NEB Grade 12 · Chapter-wise Important Questions</p>
+        <a href="index.html#subjects" class="back-link">← Back to Subjects</a>
     </div>
 
-    <!-- Fluid Mechanics -->
-    <section id="fluid-mechanics" class="chapter" aria-labelledby="fluid-title">
-      <h2 id="fluid-title">Fluid Mechanics</h2>
-      <ol>
-        <li>What is surface tension? Does it depend on surface area of fluid? Prove that the surface energy and surface tension are numerically equal. <span class="marks">[1+1+3]</span></li>
-        <li>State Pascal's law. How fluid pressure is independent of area of container. To what height should a cylindrical vessel be filled with a liquid to make the force on the side of vessel will be equal to the force on the bottom of the vessel. <span class="marks">[1+2+2]</span></li>
-        <li>State Pascal's law. Prove that fluid pressure is = ρgh where the symbol carries usual meaning. A tube of uniform cross-section has two vertical portions connected with a horizontal thin tube 8 cm long at their lower ends. Enough water to occupy 22 cm of the tube is poured into one branch enough and enough oil of specific gravity 0.8 to occupy 22 cm is poured into the other find the position of the common surface of the two liquids. <span class="marks">[1+2+2]</span></li>
-        <li>State Archimedes principle. Is it applicable for floating object? A piece of alloy of copper (ρ = 8.9) and zinc (ρ = 7.1) weighs 12.9 g in air completely immersed in water resulting weight 11.3 g in water. Find the fraction of mass metal in alloy. <span class="marks">[1+1+3]</span></li>
-        <li>State law of floatation. Is body in equilibrium in floatation? A piece of cube of wood supporting a 200 g mass just floats in water. When the mass is removed, the cube rises by 2 cm. what is the size of cube? <span class="marks">[1+2+2]</span></li>
-        <li>Define streamlined flow. How does streamlined flow turns into turbulent? It is desired to design an airplane such that the lift force is 1000 N per square meter of wing area. If the velocity of air passing along the lower surface of the wing is 150 m/s, what should be the velocity of air over the upper surface of the wing? (ρ = 1.3 kg/m³) <span class="marks">[1+1+3]</span></li>
-        <li>What is viscosity of fluid. How does it change with temperature? An air bubble of radius 1 cm rises with constant speed of 3.5 mm/s through a liquid of density of 1.75 × 10³ kg m⁻³, find the coefficient of viscosity of liquid. Neglect the density of air. <span class="marks">[1+1+3]</span></li>
-      </ol>
-    </section>
+    <div class="question-content">
 
-    <!-- Heat & Thermodynamics -->
-    <section id="heat-thermodynamics" class="chapter" aria-labelledby="heat-title">
-      <h2 id="heat-title">Heat & Thermodynamics</h2>
-      <ol>
-        <li>What is meant by thermodynamical variable? What comprises internal energy of system? Water falls from 350 m high, find the temperature change assuming that the whole of energy due to fall converted into heat. (c = 4200 J/kg·K). <span class="marks">[1+2+2]</span></li>
-        <li>What is molar heat capacity of gas? Why is the molar heat capacity at constant pressure more that constant volume? 105 calories of heat is required to raise the temperature of 3 moles of ideal gas at constant pressure from 25°C to 30°C. Calculate the amount of heat required to raise the temperature of same gas through the same range of temperature at constant volume. <span class="marks">[1+2+2]</span></li>
-        <li>What do you mean by isothermal process. Derive relation to find work done by gas expanded from pressure P1 to P2 at constant temperature T. If 5 moles of gas at 1 atm is expanded isothermally from 5 litre to 50 litre at constant temperature of 20°C, find the work done by the gas. <span class="marks">[1+2+2]</span></li>
-        <li>State the significance of first law of thermodynamics. In constant-volume process, ΔQ = ΔU holds true but in constant-pressure process ΔQ = ΔU + PΔV is not the same as ΔU, why? Two mole of ideal gas is heated from 250 K to 500 K at constant pressure. Draw P-V diagram for the process and calculate the work done. <span class="marks">[1+2+1+1]</span></li>
-        <li>State the significance P-V diagram in thermodynamics. The P-V diagram alongside shows a process involving 0.45 mol of ideal gas. What is the temperature at point "A" and "B"? How much work was done by or on the gas in this process. How much heat is to be supplied to increase the internal energy of gas by 15000 J? <span class="marks">[2+3]</span></li>
-        <li>What do you mean by adiabatic process. The equation of state of adiabatic process can be expressed as \(PV^\gamma = \text{constant}\). Using this relation show that the work done in the process is given by \(W = \dfrac{P_1V_1 - P_2V_2}{\gamma - 1}\), where the symbol carries usual meaning. During adiabatic expansion of \(\gamma - 1\) 0.5 mol of Argon gas the temperature falls to 70 K from 520 K, find the work done. <span class="marks">[1+2+2]</span></li>
-        <li>State Kelvin's statement of second law of thermodynamics. If a Carnot's engine is operating between temperature T1 and T2, what is its efficiency? A heat engine absorbs 500 calories heat from source at 200°C and rejects 200 calories to the sink whose efficiency is 75%. Find the temperature of sink and by what magnitude the sink be lowered so that efficiency reaches 85%. <span class="marks">[1+1+3]</span></li>
-        <li>What is petrol engine? Why is spark plug is needed in petrol engine? Sketch the P-V diagram for Otto cycle. Write the relation of efficiency of petrol engine in term of compression ratio. <span class="marks">[1+1+2+1]</span></li>
-        <li>A P-V diagram of an engine is present alongside, which engine does it represent? Explain why? What does a straight line "represent? Does this type of engine require spark plug, why/why not? Explain. <span class="marks">[2+2+1]</span></li>
-        <li>What do you mean by coefficient of performance of refrigerator? Why is external agency needed to operate the refrigerator? A refrigerator absorbs 200 J of heat and power supply delivers 100 J of work to the machine. What is the co-efficient of performance of the machine? <span class="marks">[1+2+2]</span></li>
-        <li>What is meant by entropy? Introduce the concept of entropy from first law of thermodynamics. Find the entropy of change in melting 1 kg of ice at 0°C to the same temperature. <span class="marks">[1+2+2]</span></li>
-        <li>Why is expansion stroke of engine called power stroke? Why should compression ratio be more in diesel engine? A petrol engine consumes 5 kg petrol per hour. If the power of engine 20 KW and calorific value of petrol is \(11 \times 10^3\) kcal per kg. Calculate efficiency of engine. <span class="marks">[1+1+3]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="fluid-mechanics">
+            <h2>Fluid Mechanics</h2>
+            <ol class="question-list">
+                <li>Define surface tension and state whether it depends on the surface area of a liquid. Show that the surface energy per unit area of a liquid is numerically equal to its surface tension. <span class="marks">[1+1+3]</span></li>
+                <li>State Pascal's law and explain why fluid pressure does not depend on the cross-sectional area of its container. For a cylindrical vessel, determine the height to which it must be filled with liquid so that the force exerted on its curved side equals the force exerted on its base. <span class="marks">[1+2+2]</span></li>
+                <li>State Pascal's law and derive the expression P = ρgh for fluid pressure at depth, where the symbols carry their usual meanings. A uniform tube has two vertical arms joined by a horizontal section 8 cm long at the bottom. Water filling 22 cm of one arm is poured in, and oil of specific gravity 0.8 filling 22 cm is poured into the other arm. Determine the position of the interface between the two liquids. <span class="marks">[1+2+2]</span></li>
+                <li>State Archimedes' principle and discuss whether it applies to floating bodies. An alloy made of copper (density 8.9 g/cm³) and zinc (density 7.1 g/cm³) weighs 12.9 g in air and 11.3 g when fully submerged in water. Calculate the mass fraction of each metal in the alloy. <span class="marks">[1+1+3]</span></li>
+                <li>State the law of floatation and comment on whether a floating body is in equilibrium. A wooden cube, loaded with a 200 g mass, just floats in water. When the mass is removed, the cube rises by 2 cm. Find the dimensions of the cube. <span class="marks">[1+2+2]</span></li>
+                <li>Define streamline flow and explain the conditions under which it becomes turbulent. An aircraft wing is to be designed to produce a lift of 1000 N per square metre of wing area. If air moves at 150 m/s beneath the wing, find the required air speed above the wing. (Take air density = 1.3 kg/m³) <span class="marks">[1+1+3]</span></li>
+                <li>Define the viscosity of a fluid and describe how it varies with temperature. An air bubble of radius 1 cm rises at a constant velocity of 3.5 mm/s through a liquid of density 1.75 × 10³ kg/m³. Calculate the coefficient of viscosity of the liquid, ignoring the density of air. <span class="marks">[1+1+3]</span></li>
+            </ol>
+        </div>
 
-    <!-- Magnetic Effect of Current -->
-    <section id="magnetic-effect" class="chapter" aria-labelledby="magnetic-title">
-      <h2 id="magnetic-title">Magnetic Effect of Current</h2>
-      <ol>
-        <li>The magnetic force experienced by a charged particle is \( \mathbf{F} = q(\mathbf{v} \times \mathbf{B}) \). Justify that a proton entering in the magnetic field perpendicular to its velocity traces a circle. Can that proton experience a zero force while moving inside the magnetic field, how? Find the force experienced by a wire of length 5 m carrying a current of 2 A inside magnetic field of 2 T such that the area vector of cross-section wire is parallel to the current. <span class="marks">[2+2+1]</span></li>
-        <li>What is Right-Thumb rule in magnetism? Explain. Show that the magnetic force experienced by a charged particle inside magnetic field is \( \mathbf{F} = q(\mathbf{v} \times \mathbf{B}) \), where the symbol carries usual meaning. Use this expression to define 1 T magnetic field at a point. <span class="marks">[1+3+1]</span></li>
-        <li>State right hand palm rule of magnetic force. A student claims that the magnetic force on particle does no work however produces torque, explain how is it possible. An electron moves in the magnetic field with velocity \(2 \times 10^6\) m/s in the field region of \(7.6 \times 10^{-2}\) T in an unspecified direction. Find the maximum and minimum possible force on it. <span class="marks">[1+2+2]</span></li>
-        <li>What is Lorentz force? A student claims that the lightning having current in the order of \(10^5\) A strikes the metal flag and the pole is bent, is student correct, how? A flat square surface with side length 3.00 cm is in xy-plane at z = 0. Calculate the magnitude of flux through the surface by the field of \( \mathbf{B} = 0.225 \hat{\imath} + 0.350 \hat{\jmath} - 0.500 \hat{k} \). <span class="marks">[1+2+2]</span></li>
-        <li>A rectangular coil of length l and breadth b carries a current I inside uniform magnetic field B.
-          <ol>
-            <li>What is the force experienced by each arm of coil. <span class="marks">[2]</span></li>
-            <li>Is this force capable of producing torque? Justify with calculation. <span class="marks">[2]</span></li>
-            <li>How is this useful in construction of moving coil galvanometer? Explain. <span class="marks">[2]</span></li>
-            <li>Why is magnetic field of galvanometer made radial? <span class="marks">[2]</span></li>
-          </ol>
-        </li>
-        <li>What happens if a current carrying specimen is placed in magnetic field such that the magnetic field and current are perpendicular to each other? A copper strip of thickness 2 mm and breadth of 2 cm carries a current 0.1 A and it is placed in magnetic field of 2 T such that current is perpendicular magnetic field. The voltage difference across the upper and lower surface is 2 μV then find current density, electric field and hence the electron concentration. <span class="marks">[2+3]</span></li>
-        <li>State Biot–Savart's law. For what kind of current, it is useful? Use it to find the magnetic field at the center due to a current carrying circular coil. If the magnetic field produced at the center of a coil of 500 turns carrying 0.2 A current is 2.5 mT. Find the diameter of coil. <span class="marks">[1+2+2]</span></li>
-        <li>State Ampere's circuital law. Use it to find the magnetic field at the center of solenoid of length l having n turns of coil per unit length carrying current I in each turn. A MRI machine possesses 5 million turns of insulated copper wire of radius 0.5 m. To diagnose the issue of a person in spinal cord, radiographer passes the current of 7.25 A in the coil. What is the magnetic field experienced by the body of patient lying in the center of the MRI machine? <span class="marks">[1+2+2]</span></li>
-        <li>Define 1 A current in terms of magnetic force. Why parallel conductors carrying current in same direction attracts each other? Two parallel wires separated at distance 2.5 m exerts a force of \(5 \times 10^{-5}\) N per meter on each other and one of them carries 0.5 A current, what's the current in other? Is the current in this wire is same? <span class="marks">[1+2+2]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="heat-thermodynamics">
+            <h2>Heat &amp; Thermodynamics</h2>
+            <ol class="question-list">
+                <li>Explain the term thermodynamic variable and describe what makes up the internal energy of a system. Water falls from a height of 350 m; assuming all the energy of the fall converts into heat, calculate the rise in temperature. (Specific heat capacity of water = 4200 J/kg·K) <span class="marks">[1+2+2]</span></li>
+                <li>Define the molar heat capacity of a gas and explain why its value at constant pressure exceeds that at constant volume. Raising the temperature of 3 moles of an ideal gas from 25°C to 30°C at constant pressure requires 105 calories. Find the heat needed to produce the same temperature rise at constant volume. <span class="marks">[1+2+2]</span></li>
+                <li>Explain what is meant by an isothermal process and derive the expression for the work done when a gas expands from pressure P₁ to P₂ at constant temperature. 5 moles of gas at 1 atm and 20°C expand isothermally from 5 litres to 50 litres; calculate the work done by the gas. <span class="marks">[1+2+2]</span></li>
+                <li>Explain the significance of the first law of thermodynamics. At constant volume, the heat supplied equals the change in internal energy, but this relation does not hold at constant pressure — explain why. Two moles of an ideal gas are heated from 250 K to 500 K at constant pressure; sketch the P-V diagram for this process and find the work done. <span class="marks">[1+2+1+1]</span></li>
+                <li>Discuss the importance of the P-V diagram in thermodynamics. For the process shown involving 0.45 mol of an ideal gas, determine the temperatures at the two marked points, the work done during the process, and the heat required to raise the internal energy by 15000 J. <span class="marks">[2+3]</span></li>
+                <li>Explain the meaning of an adiabatic process. Starting from PV<sup>γ</sup> = constant, derive the expression for work done during an adiabatic process, W = (P₁V₁ − P₂V₂)/(γ − 1). During the adiabatic expansion of 0.5 mol of argon gas, the temperature drops from 520 K to 70 K; find the work done.</li>
+                <li>State Kelvin's statement of the second law of thermodynamics, and give the efficiency expression for a Carnot engine running between two temperatures. A heat engine draws 500 calories from a source at 200°C and rejects 200 calories to a sink, giving it 75% efficiency. Find the sink temperature, and determine how much the sink temperature must be lowered to raise the efficiency to 85%. <span class="marks">[1+1+3]</span></li>
+                <li>Describe a petrol engine and explain why it requires a spark plug. Sketch the P-V diagram for the Otto cycle, and state how its efficiency relates to the compression ratio. <span class="marks">[1+1+2+1]</span></li>
+                <li>Identify which type of engine the accompanying P-V diagram represents and justify your answer. Explain what the marked straight line on the diagram signifies, and discuss whether this engine type needs a spark plug. <span class="marks">[2+2+1]</span></li>
+                <li>Define the coefficient of performance of a refrigerator, and explain why external work input is necessary to run one. A refrigerator absorbs 200 J of heat while 100 J of work is supplied to it; calculate its coefficient of performance. <span class="marks">[1+2+2]</span></li>
+                <li>Explain the concept of entropy and show how it arises from the first law of thermodynamics. Calculate the change in entropy when 1 kg of ice melts at 0°C. <span class="marks">[1+2+2]</span></li>
+                <li>Explain why the expansion stroke of an engine is referred to as the power stroke, and why diesel engines are built with a higher compression ratio. A petrol engine burns 5 kg of fuel per hour and delivers 20 kW of power; given the calorific value of petrol is 11 × 10³ kcal/kg, find the engine's efficiency. <span class="marks">[1+1+3]</span></li>
+            </ol>
+        </div>
 
-    <!-- Electromagnetic Induction -->
-    <section id="em-induction" class="chapter" aria-labelledby="em-title">
-      <h2 id="em-title">Electromagnetic Induction</h2>
-      <ol>
-        <li>State Faraday's law of electromagnetic induction. A bicycle spoke is spinning inside magnetic field such that the length of spoke is normal to field, how much induced emf will be produced. A plane of wing 40 m is travelling due north through magnetic field of \(5 \times 10^{-4}\) T (vertical component of Earth) at velocity of 500 m/s, what is the voltage developed across the wing. <span class="marks">[1+2+2]</span></li>
-        <li>What do you mean by self-induction? What will be the self-induction of solenoid of N turns and radius r carrying current I. A 60 V constant self-induced emf is to be maintained in a coil of 2 H self-inductance, how is it possible? <span class="marks">[1+2+2]</span></li>
-        <li>What is mutual induction? How is it useful in transformer? A secondary coil maintains 400 V when there is change of current in primary coil from 0 to 5 A in 0.02 s. Find the coefficient of mutual induction of coil. <span class="marks">[1+2+2]</span></li>
-        <li>What do you mean by electromagnetic induction? What will be the induced current in a closed loop having number of turns N that suffers the flux change Φ1 to Φ2 in the interval of t. Develop the relation to find the induced emf in a straight metal of length l moving in uniform magnetic field B with velocity v making angle θ with magnetic field. <span class="marks">[1+1+3]</span></li>
-        <li>State Lenz's law? How is it useful in understanding of electromagnetic induction? Does it hold good for conservation of energy? <span class="marks">[1+2+2]</span></li>
-        <li>What do you mean by self-inductance? Develop the relation to find self-inductance of ideal solenoid. An air cored solenoid of length 0.5 m and radius 2 cm has 100 turns per cm, what is its self-inductance? <span class="marks">[1+2+2]</span></li>
-        <li>State Faraday's law of electromagnetic induction. How a student can use Faraday's law of electromagnetic induction to find the induced emf in a rotating coil placed in uniform magnetic field, develop the relation and state the nature of induced emf and current. Class 12 students were asked to find the number of turns of coil of dimension 75 cm × 1.5 m used in generator that produces 220 V (at maximum) required for college during power cut. Student are given that the uniform magnetic field inside generator to be 0.75 tesla and frequency of rotation to be 1500 revolution per minute. <span class="marks">[1+3+1+3]</span></li>
-        <li>What is transformer? How is it useful in long-distance power transmission? A primary coil maintain 200 V has current 5 A and it transmit power at its 85% efficiency at same voltage. What is the current in secondary coil? <span class="marks">[1+2+2]</span></li>
-        <li>Explain how solenoid stores energy when time varying current is passed through it. The energy stored in solenoid is given by \(U = \tfrac{1}{2} L I^2\). Use it to prove the energy density is \(u = \tfrac{1}{2} \mu_0 n^2 I^2\). A solenoid of self-inductance 500 mH and radius 15 mm carries a steady current 2 A, what is the energy stored? Find the energy density too. <span class="marks">[1+2+2]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="magnetic-effect">
+            <h2>Magnetic Effect of Current</h2>
+            <ol class="question-list">
+                <li>Given that the magnetic force on a charged particle is F = q(v × B), show that a proton moving perpendicular to a magnetic field follows a circular path. Explain under what condition this proton could experience zero force. Find the force on a 5 m wire carrying a 2 A current in a 2 T magnetic field, given that the wire's cross-sectional area vector is parallel to the current. <span class="marks">[2+2+1]</span></li>
+                <li>Explain the right-hand thumb rule used in magnetism. Derive the expression F = q(v × B) for the magnetic force on a moving charge, and use it to define what constitutes a magnetic field of 1 tesla at a point. <span class="marks">[1+3+1]</span></li>
+                <li>State the right-hand palm rule for magnetic force. Explain how a magnetic force can produce torque on a particle while doing no work on it. An electron travels at 2 × 10⁶ m/s through a region of magnetic field 7.6 × 10⁻² T, entering at an unknown angle; find the maximum and minimum force it could experience. <span class="marks">[1+2+2]</span></li>
+                <li>Define the Lorentz force. Assess whether a lightning strike carrying current on the order of 10⁵ A could bend a metal flagpole, and explain the reasoning. A 3.00 cm square lies in the xy-plane at z = 0; find the magnitude of the magnetic flux through it due to the field B = 0.225î + 0.350ĵ − 0.500k̂. <span class="marks">[1+2+2]</span></li>
+                <li>A rectangular coil of length l and width b, carrying current I, sits in a uniform magnetic field B.
+                    <span class="sub-part">a. Determine the force on each arm of the coil. [2]</span>
+                    <span class="sub-part">b. Can this force generate a torque on the coil? Support your answer with a calculation. [2]</span>
+                    <span class="sub-part">c. Explain the role this plays in the design of a moving-coil galvanometer. [2]</span>
+                    <span class="sub-part">d. Why is the magnetic field in a galvanometer designed to be radial? [2]</span>
+                </li>
+                <li>Describe what happens when a current-carrying conductor is placed with its current perpendicular to an external magnetic field. A copper strip 2 mm thick and 2 cm wide carries 0.1 A current perpendicular to a 2 T field, producing a Hall voltage of 2 µV across its top and bottom faces. Determine the current density, the electric field, and the free electron concentration in the strip. <span class="marks">[2+3]</span></li>
+                <li>State the Biot-Savart law and mention the type of current it applies to. Apply it to derive the magnetic field at the centre of a current-carrying circular coil. A 500-turn coil carrying 0.2 A produces a field of 2.5 mT at its centre; find the coil's diameter. <span class="marks">[1+2+2]</span></li>
+                <li>State Ampere's circuital law and use it to derive the magnetic field at the centre of a solenoid of length l with n turns per unit length, each carrying current I. An MRI scanner's coil has 5 million turns of insulated copper wire wound on a 0.5 m radius; if a current of 7.25 A flows through it, find the magnetic field experienced by a patient positioned at its centre.</li>
+                <li>Define the ampere in terms of magnetic force between conductors. Explain why two parallel wires carrying current in the same direction attract each other. Two parallel wires 2.5 m apart experience a mutual force of 5 × 10⁻⁵ N per metre; if one carries 0.5 A, find the current in the other, and state whether the two currents are equal. <span class="marks">[1+2+2]</span></li>
+            </ol>
+        </div>
 
-    <!-- Alternating Current (AC) -->
-    <section id="ac" class="chapter" aria-labelledby="ac-title">
-      <h2 id="ac-title">Alternating Current (AC)</h2>
-      <ol>
-        <li>What is phasor? How can one represent alternating current with help of phasor? Why is rms value of AC is more useful (meaningful) in daily life than mean value? <span class="marks">[1]</span></li>
-        <li>What is inductive reactance? How is it useful in household appliances to reduce power consumption? An AC (220 V, 50 Hz) is applied across the heater of 5 Ω resistance and the current should be maintained at 0.2 A, what should be the inductance of coil connected in series with resistor? <span class="marks">[1]</span></li>
-        <li>The diagram alongside is the phasor of L-R circuit, is current leading the voltage? Why? The current amplitude in pure inductor of a radio receiver is to be 250 mA when the voltage amplitude is 3.60 V at frequency of 1.60 MHz, what is the inductive reactance of coil and self-inductance of coil. <span class="marks">[1+2+2]</span></li>
-        <li>What is electrical resonance? How do you achieve it in L-C-R series circuit? Obtain the expression for resonant frequency of such circuit. A radio possesses a resistor of 5 Ω, capacitor of 850 pF and inductor of 0.25 H, at what frequency the radio will be tuned? Find the power of the circuit, current during tuning, phase angle between current and voltage too? <span class="marks">[1+2+2+3]</span></li>
-        <li>An AC Emf is represented by \(E = 220 \sin(314t)\), state the nature of current. Justify that this current can pass through capacitor. Find the peak voltage and capacitive reactance developed by the given AC supply in capacitor of 2 μF. <span class="marks">[1+2+2]</span></li>
-        <li>Define wattless current. Justify that an ideal solenoid consumes no power when current passes through it. How are quality factor and power factor differing, explain? <span class="marks">[1+2+2]</span></li>
-        <li>The impedance of L-C-R series is given by \(Z = \sqrt{R^2 + (X_L - X_C)^2}\) then sketch the variation of impedance with frequency. Can impedance of L-C-R circuit be zero, explain. If 220 V be the rms voltage of supply is connected to L-C-R series circuit having resistance 50 Ω, what is the current in circuit during resonance. <span class="marks">[1+2+2]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="em-induction">
+            <h2>Electromagnetic Induction</h2>
+            <ol class="question-list">
+                <li>State Faraday's law of electromagnetic induction. A bicycle spoke rotates within a magnetic field, oriented perpendicular to the field — determine the induced emf this produces. A plane with a 40 m wingspan flies due north at 500 m/s through the Earth's vertical magnetic field component of 5 × 10⁻⁴ T; find the voltage induced across its wings. <span class="marks">[1+2+2]</span></li>
+                <li>Explain the concept of self-induction, and derive the self-inductance of a solenoid with N turns and radius r. A coil with 2 H of self-inductance must maintain a constant self-induced emf of 60 V — describe how this can be achieved. <span class="marks">[1+2+2]</span></li>
+                <li>Explain mutual induction and its role in transformer operation. If a secondary coil develops 400 V when the current in the primary coil changes from 0 to 5 A over 0.02 s, find the coefficient of mutual inductance between the coils. <span class="marks">[1+2+2]</span></li>
+                <li>Define electromagnetic induction and express the induced current in a closed N-turn loop whose flux changes from Φ₁ to Φ₂ over a time t. Derive the expression for the emf induced in a straight conductor of length l, moving with velocity v at an angle θ to a uniform magnetic field B. <span class="marks">[1+1+3]</span></li>
+                <li>State Lenz's law and explain its role in understanding electromagnetic induction. Discuss whether it is consistent with the principle of conservation of energy. <span class="marks">[1+2+2]</span></li>
+                <li>Explain self-inductance and derive its expression for an ideal solenoid. An air-core solenoid, 0.5 m long with a 2 cm radius and 100 turns per cm — find its self-inductance. <span class="marks">[1+2+2]</span></li>
+                <li>State Faraday's law and use it to derive the emf induced in a coil rotating in a uniform magnetic field, commenting on the nature of the resulting emf and current. A generator coil measuring 75 cm × 1.5 m must supply a peak voltage of 220 V for the college during a power outage, rotating in a 0.75 T field at 1500 rpm — find the number of turns required. <span class="marks">[1+3+1+3]</span></li>
+                <li>Explain what a transformer is and how it aids long-distance power transmission. A primary coil carrying 5 A at 200 V transmits power at 85% efficiency, with the secondary coil operating at the same voltage — find the current in the secondary coil. <span class="marks">[1+2+2]</span></li>
+                <li>Explain how a solenoid stores energy when carrying a time-varying current. Starting from U = ½LI², derive the energy density u = ½μ₀n²I². A solenoid with self-inductance 500 mH and radius 15 mm carries a steady 2 A current — find the stored energy and the energy density. <span class="marks">[1+2+2]</span></li>
+            </ol>
+        </div>
 
-    <!-- Wave Optics -->
-    <section id="wave-optics" class="chapter" aria-labelledby="wave-title">
-      <h2 id="wave-title">Wave Optics</h2>
-      <ol>
-        <li>What do you mean by wavefront? How can we produce plane wavefront? Use wave concept of light to prove the refraction phenomenon. <span class="marks">[1+1+3]</span></li>
-        <li>What is wave-particle duality of light mean? State the Huygens concept of light propagation and use to prove reflection of light. <span class="marks">[1+2+2]</span></li>
-        <li>What do you mean by coherent light? How can we produce coherent light? The phase difference of interfering wave in Young's Double slit experiment is \(\Delta \phi = \dfrac{2\pi}{\lambda} \Delta x\), where the symbol has their usual meaning. Use it to show the fringe width of bright and dark band are same. <span class="marks">[1+1+3]</span></li>
-        <li>What is diffraction of light. How is primary maximum produced in single slit diffraction? How wide is the central maximum peak on a screen 3 m behind a 0.01 mm slit is illuminated by 500 nm light source? <span class="marks">[1+2+2]</span></li>
-        <li>Why is diffraction of light is not evident in our daily life however we observe sound diffraction. In single slit diffraction, the angular location of nth secondary minimum is \(d \sin \theta = n \lambda\), where the symbol carries their usual meaning. Use it to find the angular width of central maximum and prove that the central maximum has width double the width of first secondary maximum. <span class="marks">[2+3]</span></li>
-        <li>What is diffraction grating? How is grating considered as multiple slit diffraction? A light of wavelength 5792 Å is used to determine the grating element of unknown diffraction grating and third order spectrum is measured at an angle of 60° 30' through spectrometer when the light fall normally on grating. Find grating element. <span class="marks">[1+2+2]</span></li>
-        <li>What is meant by resolving power of instrument? Describe the Rayleigh criteria for resolution of objects. James Webb space satellite has disc of 6.5 m diameter and operates at smallest wavelength of 0.6 μm. Find its resolving power. <span class="marks">[1+2+2]</span></li>
-        <li>Light is transverse in nature, how is polarizer useful to understand it? Explain. State and explain the principle described by the diagram alongside. A parallel beam of unpolarized light is incident at angle of 55° on the surface of glass and undergone complete polarization. What is the refractive index of glass and angle of refraction in glass? <span class="marks">[3+3+2]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="alternating-current">
+            <h2>Alternating Current (AC)</h2>
+            <ol class="question-list">
+                <li>Define a phasor and explain how it is used to represent alternating current. Explain why the rms value of AC is more practically meaningful in everyday use than its mean value.</li>
+                <li>Define inductive reactance and explain its role in reducing power consumption in household appliances. A 220 V, 50 Hz AC supply is connected across a 5 Ω heater, and the current is to be limited to 0.2 A by adding an inductor in series — find the required inductance.</li>
+                <li>For the given phasor diagram of an L-R circuit, determine whether the current leads the voltage, and justify your answer. A radio receiver's inductor is to carry a current amplitude of 250 mA under a voltage amplitude of 3.60 V at 1.60 MHz — find the inductive reactance and self-inductance of the coil. <span class="marks">[1+2+2]</span></li>
+                <li>Explain electrical resonance and how it is achieved in a series L-C-R circuit, deriving the resonant frequency expression. A radio circuit has a 5 Ω resistor, an 850 pF capacitor, and a 0.25 H inductor — find the tuning frequency, the circuit's power, current during tuning, and the phase angle between current and voltage. <span class="marks">[1+2+2+3]</span></li>
+                <li>Given an AC emf E = 220 sin(314t), describe the nature of the resulting current and justify why it can flow through a capacitor. Find the peak voltage, and the capacitive reactance this supply produces across a 2 μF capacitor. <span class="marks">[1+2+2]</span></li>
+                <li>Define wattless current, and explain why an ideal inductor consumes no power despite carrying current. Distinguish between quality factor and power factor. <span class="marks">[1+2+2]</span></li>
+                <li>Given the impedance of a series L-C-R circuit as Z = √(R² + (X<sub>L</sub> − X<sub>C</sub>)²), sketch how impedance varies with frequency, and discuss whether it can ever be zero. For a 220 V rms supply connected to an L-C-R circuit with 50 Ω resistance, find the current at resonance. <span class="marks">[1+2+2]</span></li>
+            </ol>
+        </div>
 
-    <!-- Radioactivity -->
-    <section id="radioactivity" class="chapter" aria-labelledby="radio-title">
-      <h2 id="radio-title">Radioactivity</h2>
-      <ol>
-        <li>A particle is equivalent to electron however it's not an electron, how? In an experiment of decay of radio-active materials, three particles A, B and C were observed in an electric or magnetic field. Name the particles A and B with justification. Explain why the particle C remained undeviated? <span class="marks">[1+1+2+1]</span></li>
-        <li>
-          <ol type="i">
-            <li>State the law of radio-activity. <span class="marks">[1]</span></li>
-            <li>Use this law and develop the relation \(N = N_0 e^{-\lambda t}\) where symbol has their usual meaning. <span class="marks">[3]</span></li>
-            <li>Develop the relation for half-life from above equation. <span class="marks">[2]</span></li>
-            <li>A radio-active substance undergone decay at the rate of 1200 dis/sec to 120 dis/sec in 10 days. Find the decay constant and half-life of the substance. <span class="marks">[2]</span></li>
-          </ol>
-        </li>
-        <li>
-          <ol type="i">
-            <li>Define one curie. <span class="marks">[1]</span></li>
-            <li>What does the graph alongside represent. Write the equation that satisfies the curve. <span class="marks">[1+1]</span></li>
-            <li>From graph, calculate half-life and mean life of substance. <span class="marks">[3]</span></li>
-            <li>If 5 million particles of this substance is allowed to decay then how many particles be decayed after 300 seconds? <span class="marks">[2]</span></li>
-          </ol>
-        </li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="wave-optics">
+            <h2>Wave Optics</h2>
+            <ol class="question-list">
+                <li>Explain the concept of a wavefront and describe how a plane wavefront can be produced. Using the wave theory of light, derive the law of refraction. <span class="marks">[1+1+3]</span></li>
+                <li>Explain what is meant by the wave-particle duality of light. State Huygens' principle of wave propagation and apply it to prove the law of reflection. <span class="marks">[1+2+2]</span></li>
+                <li>Define coherent light and describe a method to produce it. Given that the phase difference between interfering waves in Young's double-slit experiment is ΔΦ = (2π/λ)Δx, use this to show that bright and dark fringes have equal width. <span class="marks">[1+1+3]</span></li>
+                <li>Define diffraction of light and explain how the central maximum arises in single-slit diffraction. For a 0.01 mm slit illuminated by 500 nm light, with a screen placed 3 m away, find the width of the central maximum. <span class="marks">[1+2+2]</span></li>
+                <li>Explain why light diffraction is not commonly noticeable in daily life, unlike sound diffraction. Given that the nth secondary minimum in single-slit diffraction occurs at d sinθ = nλ, find the angular width of the central maximum, and show it is twice the width of the first secondary maximum. <span class="marks">[2+3]</span></li>
+                <li>Explain what a diffraction grating is and why it can be treated as a case of multiple-slit diffraction. Light of wavelength 5792 Å produces a third-order spectrum at an angle of 60°30' when incident normally on an unknown grating — find the grating element. <span class="marks">[1+2+2]</span></li>
+                <li>Define the resolving power of an optical instrument and describe the Rayleigh criterion for resolving two objects. Given the James Webb Space Telescope's mirror diameter of 6.5 m and its shortest operating wavelength of 0.6 μm, calculate its resolving power. <span class="marks">[1+2+2]</span></li>
+                <li>Explain how the use of a polarizer demonstrates that light is a transverse wave. State and explain the principle illustrated by the accompanying diagram (Brewster's law). A beam of unpolarized light striking a glass surface at 55° becomes completely polarized — find the refractive index of the glass and the angle of refraction. <span class="marks">[3+3+2]</span></li>
+            </ol>
+        </div>
 
-    <!-- Recent Trends -->
-    <section id="recent-trends" class="chapter" aria-labelledby="trends-title">
-      <h2 id="trends-title">Recent Trends</h2>
-      <ol>
-        <li>What is seismic wave? How does P and S wave carry energy from hypocenter to epicenter? Why is Love wave more hazardous, explain. <span class="marks">[1+2+2]</span></li>
-        <li>What is nano-technology? Discuss the advantages of nano-technology over other current technology of material and explain the application of it in future. <span class="marks">[1]</span></li>
-      </ol>
-    </section>
+        <div class="chapter-block" id="radioactivity">
+            <h2>Radioactivity</h2>
+            <ol class="question-list">
+                <li>Explain how a certain particle behaves like an electron without actually being one. In a radioactive decay experiment, three emitted particles A, B, and C were observed in an electric or magnetic field. Identify particles A, B, and C with reasoning, and explain why particle C showed no deflection. <span class="marks">[1+1+2+1]</span></li>
+                <li>
+                    <span class="sub-part">i. State the law of radioactive decay. [1]</span>
+                    <span class="sub-part">ii. Derive the relation N = N₀e<sup>−λt</sup> from this law, where the symbols carry their usual meanings. [3]</span>
+                    <span class="sub-part">iii. From this relation, derive the expression for half-life. [2]</span>
+                    <span class="sub-part">iv. A radioactive sample's activity falls from 1200 disintegrations/sec to 120 disintegrations/sec over 10 days — find its decay constant and half-life. [2]</span>
+                </li>
+                <li>
+                    <span class="sub-part">i. Define the curie as a unit of radioactivity. [1]</span>
+                    <span class="sub-part">ii. Identify what the accompanying graph represents, and state the equation it satisfies. [1+1]</span>
+                    <span class="sub-part">iii. Using the graph, determine the half-life and mean life of the substance. [3]</span>
+                    <span class="sub-part">iv. Starting from 5 million particles of this substance, how many will have decayed after 300 seconds? [2]</span>
+                </li>
+            </ol>
+        </div>
 
-    <footer style="margin-top:1.5rem;color:var(--muted);font-size:.95rem">
-      <p>&copy; <span id="year"></span> NEB Solution Hub. Built by Rambir.</p>
-      <p>Contact: <a href="mailto:rambirchaudhary212@gmail.com" style="color:var(--muted)">rambirchaudhary212@gmail.com</a></p>
+        <div class="chapter-block" id="recent-trends">
+            <h2>Recent Trends</h2>
+            <ol class="question-list">
+                <li>Define seismic waves and explain how P-waves and S-waves transmit energy from the hypocenter to the epicenter. Discuss why Love waves tend to be more destructive. <span class="marks">[1+2+2]</span></li>
+                <li>Define nanotechnology and discuss its advantages over conventional materials technology, along with its potential future applications.</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a></p>
+        <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
+        <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
     </footer>
-  </main>
 
-  <script>
-    // small helper to set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <script src="script.js" defer></script>
+
 </body>
 </html>

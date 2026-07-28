@@ -1,188 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NEB Solution Hub — Home</title>
-  <meta name="description" content="NEB Solution Hub — Grade 11 & 12 resources with neon-green theme and interactive mindmap." />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEB Solution Hub — Grade 12 Study Resources</title>
+    <meta name="description" content="Free notes, books, important questions, MCQs and past papers for NEB Grade 12 students in Nepal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="NEB Solution Hub home">
-        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#00FF7A"/>
-              <stop offset="1" stop-color="#00E676"/>
-            </linearGradient>
-          </defs>
-          <rect width="24" height="24" rx="6" fill="url(#g1)"></rect>
-        </svg>
-        <span class="brand">NEB Solution Hub</span>
-      </a>
 
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#subjects">Subjects</a></li>
-          <li><a class="nav-link" href="#features">Features</a></li>
-          <li><a class="nav-link" href="physics-important-questions.html">Physics Qs</a></li>
-          <li><a class="nav-link" href="#faq">FAQ</a></li>
+    <nav class="navbar">
+        <div class="logo">NEB<span>Hub</span></div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
 
-      <div class="header-actions">
-        <button id="mobile-toggle" class="icon-btn mobile-only" aria-label="Open menu">☰</button>
-        <a id="login-btn" class="btn primary" href="#login" aria-haspopup="dialog">Login</a>
-      </div>
-    </div>
+    <header class="hero reveal" id="home">
+        <h1 class="glow">Welcome to NEB Solution Hub</h1>
+        <p>Your one-stop platform for Grade 11 and Grade 12 study resources.</p>
+        <a href="#subjects" class="btn">Explore Subjects</a>
+    </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu" hidden>
-      <div class="mobile-inner">
-        <a href="#home" class="mobile-link">Home</a>
-        <a href="#subjects" class="mobile-link">Subjects</a>
-        <a href="#features" class="mobile-link">Features</a>
-        <a href="physics-important-questions.html" class="mobile-link">Physics Qs</a>
-        <a href="#faq" class="mobile-link">FAQ</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main id="main">
-    <!-- Hero -->
-    <section id="home" class="hero full-viewport">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <h1 class="headline neon">NEB Solution Hub</h1>
-          <p class="subhead">Grade 11 & 12 — concise notes, solved questions, mock tests</p>
-          <p class="lead">Organized chapters, fast revision cards, and an AI study assistant to guide your preparation.</p>
-
-          <div class="hero-ctas">
-            <a class="btn cta primary" href="#subjects">Explore Subjects</a>
-            <a class="btn cta ghost" href="physics-important-questions.html">Physics Important Qs</a>
-          </div>
-
-          <div class="meta">
-            <div class="meta-item"><strong>120k+</strong><span>Students</span></div>
-            <div class="meta-item"><strong>1.2M+</strong><span>Questions</span></div>
-            <div class="meta-item"><strong>15k+</strong><span>Notes</span></div>
-          </div>
-        </div>
-
-        <aside class="hero-right" aria-hidden="true">
-          <div class="floating-grid">
-            <div class="card floating card-1">Physics — Important Questions</div>
-            <div class="card floating card-2">Maths — Cheat Sheets</div>
-            <div class="card floating card-3">AI Tutor — Ask</div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Subjects (mindmap style) -->
-    <section id="subjects" class="section reveal" aria-labelledby="subjects-title">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="subjects-title">Subjects Covered</h2>
-          <p>Click a subject to expand resources</p>
-        </header>
-
+    <section class="subjects reveal" id="subjects" aria-label="Subjects">
+        <h2>Subjects Covered</h2>
         <div class="mindmap" role="tree" aria-label="Subjects mindmap">
-          <div class="mindmap-center" aria-hidden="true">NEB Hub</div>
+            <div class="mindmap-center">NEB Hub</div>
 
-          <!-- Physics branch -->
-          <div class="branch" role="group" aria-labelledby="branch-physics">
-            <button id="branch-physics" class="branch-node" role="treeitem" aria-expanded="false" aria-controls="physics-list">Physics</button>
-            <ul id="physics-list" class="branch-content" role="group" aria-hidden="true">
-              <li><a href="physics-important-questions.html">Important Questions</a></li>
-              <li><a href="#">Notes</a></li>
-              <li><a href="#">MCQs</a></li>
-            </ul>
-          </div>
+            <div class="branch" role="group">
+                <button class="branch-node" role="treeitem" aria-expanded="false" aria-controls="physics-content">Physics</button>
+                <ul class="branch-content" id="physics-content" role="group" aria-hidden="true">
+                    <li><a href="https://drive.google.com/file/d/14cs50y17_Lu4z3P4TkeLwvMhn2gVadFA/preview" target="_blank" rel="noopener">Book</a></li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="physics-notes">Notes</button>
+                        <ul class="sub-content" id="physics-notes" aria-hidden="true">
+                            <li><a href="#" class="disabled">Fluid Mechanics</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Heat &amp; Thermodynamics</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Magnetic Effect of Current</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Electromagnetic Induction</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Alternating Current</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Wave Optics</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Radioactivity</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Recent Trends</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="physics-pyq">Past Year Questions</button>
+                        <ul class="sub-content" id="physics-pyq" aria-hidden="true">
+                            <li><a href="#" class="disabled">2080</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2081</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2082</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="physics-important-questions.html">Important Questions</a></li>
+                    <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
+                </ul>
+            </div>
 
-          <!-- Chemistry branch -->
-          <div class="branch" role="group" aria-labelledby="branch-chemistry">
-            <button id="branch-chemistry" class="branch-node" role="treeitem" aria-expanded="false" aria-controls="chem-list">Chemistry</button>
-            <ul id="chem-list" class="branch-content" role="group" aria-hidden="true">
-              <li><a href="#">Book</a></li>
-              <li><a href="#">Notes</a></li>
-            </ul>
-          </div>
+            <div class="branch" role="group">
+                <button class="branch-node" role="treeitem" aria-expanded="false" aria-controls="chem-content">Chemistry</button>
+                <ul class="branch-content" id="chem-content" role="group" aria-hidden="true">
+                    <li><a href="https://drive.google.com/file/d/1xIrG3vovuq2t8YGF7FEQQy5wIf400NCT/preview" target="_blank" rel="noopener">Book</a></li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="chem-notes">Notes</button>
+                        <ul class="sub-content" id="chem-notes" aria-hidden="true">
+                            <li><a href="#" class="disabled">Chapter 1</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 2</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="chem-pyq">Past Year Questions</button>
+                        <ul class="sub-content" id="chem-pyq" aria-hidden="true">
+                            <li><a href="#" class="disabled">2080</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2081</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2082</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
+                    <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
+                </ul>
+            </div>
 
-          <!-- Maths branch -->
-          <div class="branch" role="group" aria-labelledby="branch-maths">
-            <button id="branch-maths" class="branch-node" role="treeitem" aria-expanded="false" aria-controls="math-list">Maths</button>
-            <ul id="math-list" class="branch-content" role="group" aria-hidden="true">
-              <li><a href="#">Notes</a></li>
-              <li><a href="#">Cheat Sheets</a></li>
-            </ul>
-          </div>
+            <div class="branch" role="group">
+                <button class="branch-node" role="treeitem" aria-expanded="false" aria-controls="maths-content">Maths</button>
+                <ul class="branch-content" id="maths-content" role="group" aria-hidden="true">
+                    <li><a href="https://drive.google.com/file/d/1QlStA3qo0ZL1tvJtXgNIPATeb5RgpO9S/preview" target="_blank" rel="noopener">Book</a></li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="maths-notes">Notes</button>
+                        <ul class="sub-content" id="maths-notes" aria-hidden="true">
+                            <li><a href="#" class="disabled">Chapter 1</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 2</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="maths-pyq">Past Year Questions</button>
+                        <ul class="sub-content" id="maths-pyq" aria-hidden="true">
+                            <li><a href="#" class="disabled">2080</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2081</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2082</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
+                    <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
+                </ul>
+            </div>
+
+            <div class="branch" role="group">
+                <button class="branch-node" role="treeitem" aria-expanded="false" aria-controls="computer-content">Computer</button>
+                <ul class="branch-content" id="computer-content" role="group" aria-hidden="true">
+                    <li><a href="https://drive.google.com/file/d/1Hbg_aZfYuCqernWK-c2e-FSSJH11PEwf/preview" target="_blank" rel="noopener">Book</a></li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="computer-notes">Notes</button>
+                        <ul class="sub-content" id="computer-notes" aria-hidden="true">
+                            <li><a href="#" class="disabled">Chapter 1</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 2</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">Chapter 3</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li class="sub-branch">
+                        <button class="sub-node" aria-expanded="false" aria-controls="computer-pyq">Past Year Questions</button>
+                        <ul class="sub-content" id="computer-pyq" aria-hidden="true">
+                            <li><a href="#" class="disabled">2080</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2081</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2082</a><span class="badge">Coming Soon</span></li>
+                            <li><a href="#" class="disabled">2083</a><span class="badge">Coming Soon</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="disabled">Important Questions</a><span class="badge">Coming Soon</span></li>
+                    <li><a href="#" class="disabled">MCQs</a><span class="badge">Coming Soon</span></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" class="section reveal">
-      <div class="container">
-        <header class="section-header">
-          <h2>Features</h2>
-          <p>Everything a serious NEB student needs</p>
-        </header>
-
-        <div class="features-grid">
-          <article class="feature"><div class="icon">📚</div><h4>Board Questions</h4><p>Curated past board questions with model answers</p></article>
-          <article class="feature"><div class="icon">✍️</div><h4>Handwritten Notes</h4><p>High-quality scanned notes and highlights</p></article>
-          <article class="feature"><div class="icon">🤖</div><h4>AI Study Assistant</h4><p>Summaries, plans, and quick answers</p></article>
-          <article class="feature"><div class="icon">📥</div><h4>PDF Downloads</h4><p>Optimized PDFs for printing and offline study</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section reveal">
-      <div class="container">
+    <section class="faq reveal" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">Is NEB Solution Hub free?<span class="faq-icon">+</span></button>
-            <div class="faq-a" hidden>Yes — core resources are free to access.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">How to download a book?<span class="faq-icon">+</span></button>
-            <div class="faq-a" hidden>Open the subject, click Book, then use the Drive viewer to download.</div>
-          </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Is NEB Solution Hub free to use?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, completely free. All notes, books, and question sets are freely accessible — no sign-up or payment required.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I download a subject's book?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tap on a subject in the mindmap above, then tap "Book." It opens directly in your browser via Google Drive, where you can read it or download it.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Which grades does this site currently cover?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Right now, NEB Solution Hub focuses on Grade 12. Grade 11 resources are planned for a future update.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Some resources say "Coming Soon" — when will they be ready?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>This site is actively being built out chapter by chapter. Physics Important Questions are live now, with Notes, MCQs, and Past Year Questions being added progressively across all subjects.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    I found an error, or want to suggest content — how do I reach out?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Email or call using the contact details in the footer below — every suggestion genuinely helps improve the site for other students too.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#00FF7A"></rect></svg>
-        <div><strong>NEB Solution Hub</strong><div class="muted">Built by Rambir</div></div>
-      </div>
+    <section class="about reveal" id="about">
+        <h2>About This Page</h2>
+        <p class="about-text">
+            NEB Solution Hub is built to help Grade 11 and Grade 12 students across Nepal
+            prepare for their exams with confidence. Our goal is to provide clear notes,
+            solved questions, diagrams, model questions, MCQs, and past papers in one
+            organized place — so students spend less time searching and more time learning.
+        </p>
+    </section>
 
-      <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#subjects">Subjects</a>
-        <a href="physics-important-questions.html">Physics Qs</a>
-      </div>
+    <footer class="reveal" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a></p>
+        <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
+        <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
+    </footer>
 
-      <div class="footer-contact">
-        <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a>
-        <div class="muted">© <span id="year"></span> NEB Solution Hub developed by Rambir</div>
-      </div>
-    </div>
-  </footer>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
+
 </body>
 </html>
