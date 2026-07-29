@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science 2083 Past Paper — NEB Solution Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">NEB<span>Hub</span></a></div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Computer Science — 2083 (2026) Board Paper</h1>
+        <p>NEB Grade 12 · Full Marks: 50 · Time: 2 hrs</p>
+        <a href="index.html#subjects" class="back-link">← Back to Subjects</a>
+    </div>
+
+    <div class="question-content">
+
+        <div class="chapter-block">
+            <span class="group-label">Group A — Multiple Choice Questions</span>
+            <p style="color: var(--color-text-muted); margin-bottom: 20px; font-size: 14px;">Attempt all questions. [9×1=9]</p>
+            <ol class="question-list">
+                <li>Records in a database are also known as:
+                    <ul class="mcq-options">
+                        <li>A) Data</li>
+                        <li>B) Fields</li>
+                        <li>C) Tuples</li>
+                        <li>D) Keys</li>
+                    </ul>
+                </li>
+                <li>Which SQL statement displays the name and address of all students who live either in Kathmandu or Bhaktapur, from a students table?
+                    <ul class="mcq-options code-options" style="grid-template-columns: 1fr;">
+                        <li>A) SELECT * FROM students WHERE address = "Kathmandu" or address = "Bhaktapur";</li>
+                        <li>B) SELECT name, address FROM Students WHERE address = "Kathmandu" or "Bhaktapur";</li>
+                        <li>C) SELECT * FROM students WHERE address = "Kathmandu" or "Bhaktapur";</li>
+                        <li>D) SELECT name, address FROM students WHERE address = "Kathmandu" or address = "Bhaktapur";</li>
+                    </ul>
+                </li>
+                <li>The full form of OSI is:
+                    <ul class="mcq-options">
+                        <li>A) Open Service Implementation</li>
+                        <li>B) Open System Internet</li>
+                        <li>C) Open Service Interconnection</li>
+                        <li>D) Open System Interconnection</li>
+                    </ul>
+                </li>
+                <li>Which JavaScript method is used to write HTML output?
+                    <ul class="mcq-options code-options">
+                        <li>A) document.write()</li>
+                        <li>B) document.output()</li>
+                        <li>C) console.log()</li>
+                        <li>D) document.writeHTML()</li>
+                    </ul>
+                </li>
+                <li>What will be the output of the following PHP code?
+                    <span class="code-block">&lt;?php $a = 10; $b = 5;
+echo $a % $b; ?&gt;</span>
+                    <ul class="mcq-options code-options">
+                        <li>A) 0</li>
+                        <li>B) 1</li>
+                        <li>C) 2</li>
+                        <li>D) 5</li>
+                    </ul>
+                </li>
+                <li>What does <code>++X</code> do in a C program?
+                    <ul class="mcq-options">
+                        <li>A) Returns value then increments</li>
+                        <li>B) Increments then returns value</li>
+                        <li>C) Decrements value</li>
+                        <li>D) Returns original value</li>
+                    </ul>
+                </li>
+                <li>Which of the following features allows the same method name to be used for different types/numbers of parameters, in OOP?
+                    <ul class="mcq-options">
+                        <li>A) Abstraction</li>
+                        <li>B) Encapsulation</li>
+                        <li>C) Polymorphism</li>
+                        <li>D) Inheritance</li>
+                    </ul>
+                </li>
+                <li>Which model follows a strict linear sequential phase order?
+                    <ul class="mcq-options">
+                        <li>A) Agile</li>
+                        <li>B) Waterfall</li>
+                        <li>C) Prototype</li>
+                        <li>D) Scrum</li>
+                    </ul>
+                </li>
+                <li>A device automatically adjusts room temperature based on real-time sensor data and internet connectivity. Which technology does this represent?
+                    <ul class="mcq-options">
+                        <li>A) Desktop computing</li>
+                        <li>B) Cloud storage</li>
+                        <li>C) IoT (Internet of Things)</li>
+                        <li>D) Traditional Embedded System</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="chapter-block">
+            <span class="group-label">Group B — Short Answer Questions</span>
+            <p style="color: var(--color-text-muted); margin-bottom: 20px; font-size: 14px;">[5×5=25]</p>
+            <ol class="question-list" start="10">
+                <li>Compare the hierarchical database model and the relational database model. Write two advantages of each model. <span class="marks">[3+2]</span>
+                    <div class="or-divider">OR</div>
+                    <span class="sub-part">Describe 2NF with an example. [5]</span>
+                </li>
+                <li>Write a JavaScript program that accepts three numbers as input and finds the smallest among them. <span class="marks">[5]</span>
+                    <div class="or-divider">OR</div>
+                    <span class="sub-part">Write a PHP script that connects to a MySQL database named <code>school</code>, retrieves all records from the student table, and displays them in an HTML table. [5]</span>
+                </li>
+                <li>What is OOP (Object Oriented Programming)? Describe any four features of OOP. <span class="marks">[1+4]</span></li>
+                <li>Explain technical feasibility and economic feasibility. <span class="marks">[2.5+2.5]</span></li>
+                <li>Explain the basic concept of cloud computing with any three advantages. <span class="marks">[2+3]</span></li>
+            </ol>
+        </div>
+
+        <div class="chapter-block">
+            <span class="group-label">Group C — Long Answer Questions</span>
+            <p style="color: var(--color-text-muted); margin-bottom: 20px; font-size: 14px;">[2×8=16]</p>
+            <ol class="question-list" start="15">
+                <li>Explain twisted pair cable, coaxial cable, and optical fibre cable. <span class="marks">[8]</span></li>
+                <li>
+                    <span class="sub-part">a) Write a C program to input a number and check whether it is positive, negative, or zero, using a user-defined function. [4]</span>
+                    <span class="sub-part">b) Write a C program to generate the Fibonacci series starting with the first two terms 7 and 14, up to 10 terms, using a user-defined function. [4]</span>
+                    <div class="or-divider">OR</div>
+                    <span class="sub-part">Write a C program that reads the roll number, name, section, and marks of 10 students using an array of structures, and displays them. [8]</span>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rambirchaudhary212@gmail.com">rambirchaudhary212@gmail.com</a></p>
+        <p>Phone: <a href="tel:+9779766090914">9766090914</a></p>
+        <p class="copyright">&copy; 2026 NEB Solution Hub. Built by Rambir.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
