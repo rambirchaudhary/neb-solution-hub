@@ -804,3 +804,16 @@ footer { border-top: 1px solid var(--color-border); background: #0d0709; }
 @keyframes breathe { 50% { scale: 1.035; opacity: .72; } }
 @media (max-width: 860px) { .hero { min-height: auto; padding-top: 110px; padding-bottom: 80px; text-align: center; }.hero::before, .hero::after, .hero-orbit { opacity: .22; right: 50%; translate: 50% 0; }.hero h1, .hero p:not(.eyebrow) { margin-left: auto; margin-right: auto; }.hero-actions, .hero-stats { justify-content: center; }.mindmap { padding: 28px 20px; } }
 @media (max-width: 768px) { .navbar, .hero { width: min(100% - 40px, 1240px); }.navbar { padding: 18px 0; }.nav-links { top: 68px; right: 0; border: 1px solid var(--color-border); border-radius: 12px; background: rgba(15, 7, 10, .97); box-shadow: 0 15px 40px rgba(0,0,0,.45); }.hero h1 { letter-spacing: -2px; }.hero-orbit, .hero::before, .hero::after { width: 360px; height: 360px; top: 140px; }.orbit-core { width: 115px; height: 115px; }.orbit-core span { font-size: 32px; letter-spacing: -2px; }.orbit-core small { margin-top: 6px; font-size: 18px; letter-spacing: 5px; text-indent: 5px; }.subjects { padding: 90px 20px 70px; }.mindmap { padding: 25px 12px; }.chapter-block { padding: 22px 17px; } }
+
+/* Mobile performance mode: keep the design, but avoid continuous painting on lower-powered phones. */
+@media (max-width: 768px), (pointer: coarse) {
+    body::before { display: none; }
+    .navbar { backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .hero::before { box-shadow: none; }
+    .hero::after { filter: none; }
+    .hero-orbit, .hero::before, .orbit-core, .orbit-dot { animation: none; }
+    .orbit-dot { box-shadow: 0 0 12px rgba(255,7,81,.55); }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .finder, .mindmap { box-shadow: none; }
+    .btn, .study-plan li, .branch-node, .back-to-top { transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
+}
