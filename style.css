@@ -817,3 +817,13 @@ footer { border-top: 1px solid var(--color-border); background: #0d0709; }
     .finder, .mindmap { box-shadow: none; }
     .btn, .study-plan li, .branch-node, .back-to-top { transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
 }
+
+/* Desktop pointer accent. It is opt-in through JavaScript and never runs on touch devices. */
+.cursor-glow { display: none; }
+@media (hover: hover) and (pointer: fine) {
+    .cursor-glow { display: grid; place-items: center; position: fixed; z-index: 9999; top: 0; left: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 1px solid rgba(255, 58, 112, .9); border-radius: 50%; pointer-events: none; opacity: 0; transform: translate3d(-100px, -100px, 0); transition: width .2s ease, height .2s ease, margin .2s ease, opacity .2s ease, border-color .2s ease; }
+    .cursor-glow span { width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 13px 4px rgba(255, 7, 81, .62); }
+    .cursor-ready, .cursor-ready a, .cursor-ready button, .cursor-ready input, .cursor-ready summary { cursor: none; }
+    .cursor-glow.is-visible { opacity: 1; }
+    .cursor-glow.is-active { width: 54px; height: 54px; margin: -27px 0 0 -27px; border-color: #fff2f6; background: rgba(255, 7, 81, .08); }
+}

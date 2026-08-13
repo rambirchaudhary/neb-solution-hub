@@ -124,3 +124,29 @@ if (backToTopBtn) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+// Smooth neon cursor for mouse/trackpad users. Touch devices retain their native cursor behavior.
+const cursorGlow = document.querySelector('.cursor-glow');
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+if (cursorGlow && finePointer.matches) {
+    let targetX = -100;
+    let targetY = -100;
+    let framePending = false;
+
+    document.body.classList.add('cursor-ready');
+    document.addEventListener('pointermove', function(event) {
+        targetX = event.clientX;
+        targetY = event.clientY;
+        cursorGlow.classList.add('is-visible');
+        if (framePending) return;
+        framePending = true;
+        requestAnimationFrame(function() {
+            cursorGlow.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+            framePending = false;
+        });
+    });
+    document.addEventListener('pointerover', function(event) {
+        cursorGlow.classList.toggle('is-active', Boolean(event.target.closest('a, button, input, summary')));
+    });
+    document.addEventListener('pointerleave', function() { cursorGlow.classList.remove('is-visible'); });
+}
