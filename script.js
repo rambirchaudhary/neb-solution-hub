@@ -132,6 +132,19 @@ if (cursorGlow && finePointer.matches) {
     let targetX = -100;
     let targetY = -100;
     let framePending = false;
+    let lastParticleAt = 0;
+
+    function makeParticle(x, y) {
+        const particle = document.createElement('i');
+        particle.className = 'cursor-particle';
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+        particle.style.setProperty('--size', `${3 + Math.random() * 5}px`);
+        particle.style.setProperty('--drift-x', `${-18 + Math.random() * 36}px`);
+        particle.style.setProperty('--drift-y', `${-14 + Math.random() * 25}px`);
+        document.body.appendChild(particle);
+        particle.addEventListener('animationend', function() { particle.remove(); }, { once: true });
+    }
 
     document.body.classList.add('cursor-ready');
     document.addEventListener('pointermove', function(event) {
@@ -144,6 +157,10 @@ if (cursorGlow && finePointer.matches) {
             cursorGlow.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
             framePending = false;
         });
+        if (event.timeStamp - lastParticleAt > 38) {
+            makeParticle(event.clientX + 2, event.clientY + 4);
+            lastParticleAt = event.timeStamp;
+        }
     });
     document.addEventListener('pointerover', function(event) {
         cursorGlow.classList.toggle('is-active', Boolean(event.target.closest('a, button, input, summary')));
