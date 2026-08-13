@@ -28,7 +28,62 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 if (hamburger && navLinks) {
     hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks.addEventListener('click', function(event) {
+        if (event.target.matches('a')) {
+            navLinks.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open menu');
+        }
+    });
+}
+
+// Close expanded controls with Escape.
+document.addEventListener('keydown', function(event) {
+    if (event.key !== 'Escape') return;
+    document.querySelectorAll('.branch.open, .sub-branch.open').forEach(function(item) {
+        item.classList.remove('open');
+        const button = item.querySelector(':scope > button');
+        const content = item.querySelector(':scope > ul');
+        if (button) button.setAttribute('aria-expanded', 'false');
+        if (content) content.setAttribute('aria-hidden', 'true');
+    });
+    if (navLinks && hamburger) {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+    }
+});
+
+// Resource finder: filters the existing subject tree without duplicating content.
+const resourceSearch = document.getElementById('resourceSearch');
+const searchStatus = document.getElementById('searchStatus');
+if (resourceSearch) {
+    resourceSearch.addEventListener('input', function() {
+        const query = resourceSearch.value.trim().toLowerCase();
+        const allBranches = document.querySelectorAll('.branch');
+        let visibleSubjects = 0;
+
+        allBranches.forEach(function(branch) {
+            const items = branch.querySelectorAll('.branch-content > li');
+            let branchMatches = branch.querySelector('.branch-node').textContent.toLowerCase().includes(query);
+
+            items.forEach(function(item) {
+                const matches = item.textContent.toLowerCase().includes(query);
+                item.classList.toggle('is-filtered-out', Boolean(query) && !matches && !branchMatches);
+                branchMatches = branchMatches || matches;
+            });
+
+            branch.classList.toggle('is-filtered-out', Boolean(query) && !branchMatches);
+            branch.classList.toggle('is-search-open', Boolean(query) && branchMatches);
+            if (branchMatches) visibleSubjects += 1;
+        });
+
+        searchStatus.textContent = query ? `${visibleSubjects} subject${visibleSubjects === 1 ? '' : 's'} match “${resourceSearch.value.trim()}”.` : '';
     });
 }
 

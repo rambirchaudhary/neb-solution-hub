@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="navbar">
-        <div class="logo">NEB<span>Hub</span></div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="NEB Solution Hub home">NEB<span>Hub</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#subjects">Subjects</a></li>
@@ -23,13 +24,23 @@
         </ul>
     </nav>
 
+    <main id="main-content">
     <header class="hero reveal" id="home">
+        <p class="eyebrow">Grade 12 study resources · Nepal</p>
         <h1 class="glow">Welcome to NEB Solution Hub</h1>
         <p>Your one-stop platform for Grade 11 and Grade 12 study resources.</p>
-        <a href="#subjects" class="btn">Explore Subjects</a>
+        <div class="hero-actions"><a href="#subjects" class="btn">Explore Subjects</a><a href="#finder" class="btn btn-secondary">Find a resource</a></div>
+        <ul class="hero-stats" aria-label="Resource summary"><li><strong>4</strong> subjects</li><li><strong>4</strong> live 2083 papers</li><li><strong>1</strong> important-question set</li></ul>
     </header>
 
+    <section class="finder reveal" id="finder" aria-labelledby="finder-title">
+        <div><p class="eyebrow">Quick finder</p><h2 id="finder-title">What are you revising?</h2><p>Search the study map by subject, resource type, year, or chapter.</p></div>
+        <label class="search-field" for="resourceSearch"><span class="sr-only">Search resources</span><span aria-hidden="true">⌕</span><input id="resourceSearch" type="search" placeholder="Try “Physics”, “2083”, or “Book”" autocomplete="off"></label>
+        <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+    </section>
+
     <section class="subjects reveal" id="subjects" aria-label="Subjects">
+        <p class="eyebrow">Resource library</p>
         <h2>Subjects Covered</h2>
         <div class="mindmap" role="tree" aria-label="Subjects mindmap">
             <div class="mindmap-center">NEB Hub</div>
@@ -145,6 +156,11 @@
         </div>
     </section>
 
+    <section class="study-plan reveal" aria-labelledby="study-plan-title">
+        <div><p class="eyebrow">Build momentum</p><h2 id="study-plan-title">A simple revision loop</h2></div>
+        <ol><li><span>01</span><h3>Read the chapter</h3><p>Open the official book and work through the concept before practicing.</p></li><li><span>02</span><h3>Practice actively</h3><p>Use important questions or the 2083 paper without looking at answers first.</p></li><li><span>03</span><h3>Mark your gaps</h3><p>Return to the chapter notes you need next. New resources will appear here as they are ready.</p></li></ol>
+    </section>
+
     <section class="faq reveal" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
@@ -205,6 +221,8 @@
             organized place — so students spend less time searching and more time learning.
         </p>
     </section>
+
+    </main>
 
     <footer class="reveal" id="contact">
         <h2>Contact</h2>
