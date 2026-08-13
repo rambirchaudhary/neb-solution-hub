@@ -253,7 +253,6 @@ h1, h2, h3, .logo {
     margin-left: 10px;
 }
 
-.branch:hover .branch-content,
 .branch.open .branch-content {
     max-height: 600px;
 }
@@ -705,7 +704,6 @@ a.logo { text-decoration: none; }
 .study-plan h3 { margin: 10px 0 6px; }
 .study-plan li p { color: var(--color-text-muted); font-size: 14px; }
 @media (max-width: 768px) { .finder, .study-plan { margin-left: 20px; margin-right: 20px; padding: 35px 22px; } .finder { display: block; } .search-field { margin-top: 24px; } .search-status { margin-top: 12px; } .study-plan ol { grid-template-columns: 1fr; } }
-@media (hover: none) { .branch:hover .branch-content { max-height: 0; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
 
 /* The ARIA state is the single source of truth for expanded resource panels. */
