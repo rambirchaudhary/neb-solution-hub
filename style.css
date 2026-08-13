@@ -707,3 +707,7 @@ a.logo { text-decoration: none; }
 @media (max-width: 768px) { .finder, .study-plan { margin-left: 20px; margin-right: 20px; padding: 35px 22px; } .finder { display: block; } .search-field { margin-top: 24px; } .search-status { margin-top: 12px; } .study-plan ol { grid-template-columns: 1fr; } }
 @media (hover: none) { .branch:hover .branch-content { max-height: 0; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+
+/* The ARIA state is the single source of truth for expanded resource panels. */
+.branch-content[aria-hidden="false"] { max-height: 1200px; }
+.sub-content[aria-hidden="false"] { max-height: 900px; }
